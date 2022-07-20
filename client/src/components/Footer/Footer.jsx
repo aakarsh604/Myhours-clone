@@ -60,7 +60,7 @@ export default function Footer() {
               <Text fontSize={"sm"}>All rights reserved.</Text>
             </VStack>
           </Stack>
-          <Stack align={"flex-start"}  >
+          <Stack align={"flex-start"} spacing="3"  >
             <ListHeader>Product</ListHeader>
             <Link href={"#"}>How it works</Link>
             <Link href={"#"}>Features</Link>
@@ -71,7 +71,7 @@ export default function Footer() {
             <Link href={"#"}>Customer Reviews</Link>
             <Link href={"#"}>Start Free</Link>
           </Stack>
-          <Stack align={"flex-start"} textAlign={ 'left'} >
+          <Stack align={"flex-start"} spacing="3" >
             <ListHeader>Resources</ListHeader>
             <Link href={"#"}>Time Tracking Library</Link>
             <Link href={"#"}>About</Link>
@@ -82,7 +82,7 @@ export default function Footer() {
             <Link href={"#"}>Best Time Tracking Apps of 2022</Link>
             <Link href={"#"}>Free Time Card Calculator</Link>
           </Stack>
-          <Stack align={"flex-start"}>
+          <Stack align={"flex-start"} spacing="3">
             <ListHeader>Use Cases</ListHeader>
             <Link href={"#"}>Project Billing</Link>
             <Link href={"#"}>Time reports and Project analytics</Link>
@@ -91,13 +91,13 @@ export default function Footer() {
             <Link href={"#"}>Calculating project profitablity</Link>
             <Link href={"#"}>Timesheet time Tracking</Link>
           </Stack>
-          <Stack align={"flex-start"}>
+          <Stack align={"flex-start"} spacing="3">
             <ListHeader>Integrations</ListHeader>
             <Link href={"#"}>QuickBooks</Link>
             <Link href={"#"}>Zapier</Link>
             
           </Stack>
-          <Stack align={"flex-start"}>
+          <Stack align={"flex-start"} spacing="3">
             <ListHeader>Follow Us</ListHeader>
             <Link href={"#"}>Facebook</Link>
             <Link href={"#"}>Twitter</Link>
