@@ -51,17 +51,17 @@ export default function Footer() {
           spacing={8}
           textAlign={ 'left'}
         >
-          <Stack spacing={1}>
+          <Stack spacing={3}>
             <Box ml={'6rem'}>
               <Logo color={useColorModeValue("gray.700", "white")} />
             </Box>
 
             <VStack>
-              <Text fontSize={"sm"}>© 2022 Chakra Templates.</Text>
-              <Text fontSize={"sm"}>All rights reserved</Text>
+              <Text fontSize={"sm"}>© 2022 My Hours.</Text>
+              <Text fontSize={"sm"}>All rights reserved.</Text>
             </VStack>
           </Stack>
-          <Stack align={"flex-start"}  >
+          <Stack align={"flex-start"} spacing={4}  >
             <ListHeader>Product</ListHeader>
             <Link href={"#"}>How it works</Link>
             <Link href={"#"}>Features</Link>
@@ -72,7 +72,7 @@ export default function Footer() {
             <Link href={"#"}>Customer Reviews</Link>
             <Link href={"#"}>Start Free</Link>
           </Stack>
-          <Stack align={"flex-start"} textAlign={ 'left'} >
+          <Stack align={"flex-start"} spacing={4} textAlign={ 'left'} >
             <ListHeader>Resources</ListHeader>
             <Link href={"#"}>Time Tracking Library</Link>
             <Link href={"#"}>About</Link>
@@ -83,7 +83,7 @@ export default function Footer() {
             <Link href={"#"}>Best Time Tracking Apps of 2022</Link>
             <Link href={"#"}>Free Time Card Calculator</Link>
           </Stack>
-          <Stack align={"flex-start"}>
+          <Stack align={"flex-start"} spacing={4}>
             <ListHeader>Use Cases</ListHeader>
             <Link href={"#"}>Project Billing</Link>
             <Link href={"#"}>Time reports and Project analytics</Link>
@@ -92,13 +92,13 @@ export default function Footer() {
             <Link href={"#"}>Calculating project profitablity</Link>
             <Link href={"#"}>Timesheet time Tracking</Link>
           </Stack>
-          <Stack align={"flex-start"}>
+          <Stack align={"flex-start"} spacing={4}>
             <ListHeader>Integrations</ListHeader>
             <Link href={"#"}>QuickBooks</Link>
             <Link href={"#"}>Zapier</Link>
             
           </Stack>
-          <Stack align={"flex-start"}>
+          <Stack align={"flex-start"} spacing={4}>
             <ListHeader>Follow Us</ListHeader>
             <Link href={"#"}>Facebook</Link>
             <Link href={"#"}>Twitter</Link>
