@@ -26,7 +26,7 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box position={"fixed"} w={"100%"} m={'0px'}>
+    <Box position={"fixed"} w={"100%"} mt={'-10rem'}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -41,7 +41,7 @@ export default function WithSubnavigation() {
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
+        //   ml={{ base: -2 }}
           display={{ base: "flex", md: "none" }}
         >
           <IconButton
