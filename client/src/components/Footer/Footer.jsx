@@ -35,7 +35,7 @@ const Logo = (props) => {
 
 const ListHeader = ({ children }) => {
   return (
-    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
+    <Text fontWeight={"1000"} fontSize={"lg"} mb={2}>
       {children}
     </Text>
   );
@@ -44,25 +44,23 @@ const ListHeader = ({ children }) => {
 export default function Footer() {
   return (
     <Box bg={"#375d75"}  color={"cornsilk"}>
-      <Container as={Stack} maxW={"6xl"}  py={6}>
+      <Container as={Stack} maxW={"6xl"} py={6}>
         <SimpleGrid
-          mt="3rem"
-          ml={'-7%'}
-          templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 1fr 1fr" }}
-          spacing={8}
+          
+          templateColumns={{ sm: "1fr ", md: "1fr 1fr 1fr 1fr 1fr 1fr" }}          
           textAlign={ 'left'}
         >
           <Stack spacing={3}>
-            <Box ml={'6rem'}>
+            <Box ml = "2rem">
               <Logo color={useColorModeValue("gray.700", "white")} />
             </Box>
 
-            <VStack>
+            <VStack >
               <Text fontSize={"sm"}>© 2022 My Hours.</Text>
               <Text fontSize={"sm"}>All rights reserved.</Text>
             </VStack>
           </Stack>
-          <Stack align={"flex-start"} spacing={4}  >
+          <Stack align={"flex-start"}  >
             <ListHeader>Product</ListHeader>
             <Link href={"#"}>How it works</Link>
             <Link href={"#"}>Features</Link>
@@ -73,7 +71,7 @@ export default function Footer() {
             <Link href={"#"}>Customer Reviews</Link>
             <Link href={"#"}>Start Free</Link>
           </Stack>
-          <Stack align={"flex-start"} spacing={4} textAlign={ 'left'} >
+          <Stack align={"flex-start"} textAlign={ 'left'} >
             <ListHeader>Resources</ListHeader>
             <Link href={"#"}>Time Tracking Library</Link>
             <Link href={"#"}>About</Link>
@@ -84,7 +82,7 @@ export default function Footer() {
             <Link href={"#"}>Best Time Tracking Apps of 2022</Link>
             <Link href={"#"}>Free Time Card Calculator</Link>
           </Stack>
-          <Stack align={"flex-start"} spacing={4}>
+          <Stack align={"flex-start"}>
             <ListHeader>Use Cases</ListHeader>
             <Link href={"#"}>Project Billing</Link>
             <Link href={"#"}>Time reports and Project analytics</Link>
@@ -93,13 +91,13 @@ export default function Footer() {
             <Link href={"#"}>Calculating project profitablity</Link>
             <Link href={"#"}>Timesheet time Tracking</Link>
           </Stack>
-          <Stack align={"flex-start"} spacing={4}>
+          <Stack align={"flex-start"}>
             <ListHeader>Integrations</ListHeader>
             <Link href={"#"}>QuickBooks</Link>
             <Link href={"#"}>Zapier</Link>
             
           </Stack>
-          <Stack align={"flex-start"} spacing={4}>
+          <Stack align={"flex-start"}>
             <ListHeader>Follow Us</ListHeader>
             <Link href={"#"}>Facebook</Link>
             <Link href={"#"}>Twitter</Link>
