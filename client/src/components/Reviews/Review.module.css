@@ -1,0 +1,9 @@
+.highlighter {
+  background: rgb(125, 230, 202);
+  background: linear-gradient(
+    90deg,
+    rgb(139, 223, 200) 3%,
+    rgb(224, 255, 247) 100%
+  );
+  border-radius: 10px;
+}
