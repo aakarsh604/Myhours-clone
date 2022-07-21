@@ -48,14 +48,13 @@ function Usecase() {
       </Button>
 
       <Grid
-        border="black"
         templateColumns="repeat(3, 1fr)"
-        templateRows="repeat(3, 1fr)"
+        templateRows="repeat(2, 1fr)"
         gap={6}
         mt="200px"
       >
         {data.map((el, ind) => (
-          <Box key={ind} boxShadow="2xl" rounded="20" p="5" h="420">
+          <Box key={ind} boxShadow="2xl" rounded="20" p="5" h="420" border="1px solid lightBlue">
             <Image m="auto" src={el.imgurl} h="200"/>
             <Heading fontWeight="500" size="lg" textAlign="start">
               {el.title}
