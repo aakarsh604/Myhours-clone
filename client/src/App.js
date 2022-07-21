@@ -8,6 +8,7 @@ import Header from './components/Hedear/Header';
 import Usecase from './pages/UsecasePage/Usecase';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
       <Route path='/signup' element={<Signin/>}/> 
       <Route path='/usecase' element={<Usecase/>}/> 
      </Routes>
+     
      <Footer/>
     </div>
   );
