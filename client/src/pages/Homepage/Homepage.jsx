@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import {
   Box,
   Button,
@@ -25,7 +25,6 @@ import {AiOutlineArrowRight} from 'react-icons/ai'
 function Homepage() {
   return (
     <Box fontFamily={"Avenirnextltpro"} letterSpacing={2} mt={{ md: "10rem" }}>
->>>>>>> master
       {/* 1st part */}
       <Box w={"80%"} m={"auto"}>
         <p style={{ fontSize: "80px", fontWeight: "100" }}>
