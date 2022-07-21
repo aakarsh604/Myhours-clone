@@ -11,11 +11,12 @@ const {connection} = require("./project/database/teamMember")
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
  app.use(cors())
-
- app.use("/client",clientRouter)
+//   app.use("/",clientRouter)
+  app.use("/client",clientRouter)
  app.use("/teamMember",Team)
+//  app.use("/teamMemberdata",Team)
 
- app.listen(5000, async () => {
+ app.listen(4040, async () => {
  try {
     await connection;
     console.log("connection to db");
