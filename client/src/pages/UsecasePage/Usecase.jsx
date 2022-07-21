@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Heading, Text, Button, Grid, Image } from "@chakra-ui/react";
 import data from "./data.json";
-console.log("data:", data);
+import Reviews from "../../components/Reviews/Reviews";
 
 function Usecase() {
   return (
@@ -48,6 +48,7 @@ function Usecase() {
       </Button>
 
       <Grid
+        border="black"
         templateColumns="repeat(3, 1fr)"
         templateRows="repeat(3, 1fr)"
         gap={6}
@@ -63,6 +64,8 @@ function Usecase() {
           </Box>
         ))}
       </Grid>
+
+      <Reviews/>
     </Box>
   );
 }
