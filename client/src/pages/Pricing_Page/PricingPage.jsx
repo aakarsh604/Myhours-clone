@@ -1,5 +1,13 @@
 import React from 'react';
 import {
+  Accordion,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  AccordionItem,
+} from '@chakra-ui/react';
+import { CheckIcon, ArrowRightIcon } from '@chakra-ui/icons';
+import {
   Track,
   FreeList,
   ProList,
@@ -12,6 +20,7 @@ import {
 } from './TableData';
 import {
   Button,
+  ProButton,
   ButtonDiv,
   Div2,
   Div3,
@@ -22,11 +31,28 @@ import {
   Heading3,
   Heading4,
   List,
-} from './Styled-Components';
+  FAQdiv,
+  FeatureDiv,
+  FAQtitle,
+  Question,
+  Answer,
+  TdHead,
+  Td,
+  Th,
+  Review,
+  ReviewDiv,
+  MemberName,
+  Value,
+  H5,
+} from './Style';
+const panel = {
+  width: '93%',
+  margin: 'auto',
+};
 
 export const PricingPage = () => {
   return (
-    <div>
+    <div style={{ fontFamily: 'Avernirnextitpro, sans-serif' }}>
       <Heading1>Pick your plan</Heading1>
       <Heading2>Track time on projects with your team.</Heading2>
       <Div2>
@@ -38,6 +64,8 @@ export const PricingPage = () => {
           <br />
           <Dollar>$</Dollar>
           <Dollar$>0</Dollar$>
+          <br />
+          <br />
           <br />
           <ul>
             {FreeList.map((e, i) => (
@@ -52,11 +80,11 @@ export const PricingPage = () => {
           </Heading4>
           <br />
           <Div3>
-            <div>
+            <div style={{ marginRight: '2rem' }}>
               <Dollar>$</Dollar>
               <Dollar$>6</Dollar$>
             </div>
-            <div>
+            <div style={{ marginTop: '-1rem' }}>
               <p>-per active team member, per month billed annually</p>
               <p>-$7 billed monthly</p>
             </div>
@@ -71,93 +99,140 @@ export const PricingPage = () => {
       </Div2>
       <ButtonDiv>
         <Button>Select</Button>
-        <Button>14 day free trial</Button>
+        <ProButton>14 day free trial</ProButton>
       </ButtonDiv>
-      <div>
-        <table style={{ margin: '50px 150px' }}>
+      <FeatureDiv>
+        <table>
           <thead>
             <tr>
-              <th style={{ paddingRight: '750px' }}>Feature</th>
-              <th style={{ paddingRight: '100px' }}>Free</th>
-              <th>Pro</th>
+              <Th style={{ paddingRight: '700px' }}>Feature</Th>
+              <Th style={{ paddingRight: '100px' }}>Free</Th>
+              <Th>Pro</Th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Track</td>
+              <TdHead>Track</TdHead>
             </tr>
             {Track.map((e, i) => {
               return (
                 <tr key={i}>
-                  <td>{e.title}</td>
-                  <td>{e.free ? 'Yes' : 'No'}</td>
-                  <td>{e.pro ? 'Yes' : 'No'}</td>
+                  <Td>{e.title}</Td>
+                  <Td>{e.free ? <CheckIcon /> : ''}</Td>
+                  <Td>{e.pro ? <CheckIcon /> : ''}</Td>
                 </tr>
               );
             })}
             <tr>
-              <td>Organize</td>
+              <TdHead>Organize</TdHead>
             </tr>
             {Organize.map((e, i) => {
               return (
                 <tr key={i}>
-                  <td>{e.title}</td>
-                  <td>{e.free ? 'Yes' : 'No'}</td>
-                  <td>{e.pro ? 'Yes' : 'No'}</td>
+                  <Td>{e.title}</Td>
+                  <Td>{e.free ? <CheckIcon /> : ''}</Td>
+                  <Td>{e.pro ? <CheckIcon /> : ''}</Td>
                 </tr>
               );
             })}
             <tr>
-              <td>Billing</td>
+              <TdHead>Billing</TdHead>
             </tr>
             {Biling.map((e, i) => {
               return (
                 <tr key={i}>
-                  <td>{e.title}</td>
-                  <td>{e.free ? 'Yes' : 'No'}</td>
-                  <td>{e.pro ? 'Yes' : 'No'}</td>
+                  <Td>{e.title}</Td>
+                  <Td>{e.free ? <CheckIcon /> : ''}</Td>
+                  <Td>{e.pro ? <CheckIcon /> : ''}</Td>
                 </tr>
               );
             })}
             <tr>
-              <td>Report</td>
+              <TdHead>Report</TdHead>
             </tr>
             {Report.map((e, i) => {
               return (
                 <tr key={i}>
-                  <td>{e.title}</td>
-                  <td>{e.free ? 'Yes' : 'No'}</td>
-                  <td>{e.pro ? 'Yes' : 'No'}</td>
+                  <Td>{e.title}</Td>
+                  <Td>{e.free ? <CheckIcon /> : ''}</Td>
+                  <Td>{e.pro ? <CheckIcon /> : ''}</Td>
                 </tr>
               );
             })}
             <tr>
-              <td>Team</td>
+              <TdHead>Team</TdHead>
             </tr>
             {Team.map((e, i) => {
               return (
                 <tr key={i}>
-                  <td>{e.title}</td>
-                  <td>{e.free ? 'Yes' : 'No'}</td>
-                  <td>{e.pro ? 'Yes' : 'No'}</td>
+                  <Td>{e.title}</Td>
+                  <Td>{e.free ? <CheckIcon /> : ''}</Td>
+                  <Td>{e.pro ? <CheckIcon /> : ''}</Td>
                 </tr>
               );
             })}
             <tr>
-              <td>Integration and Apps</td>
+              <TdHead>Integration and Apps</TdHead>
             </tr>
             {Integration_and_Apps.map((e, i) => {
               return (
                 <tr key={i}>
-                  <td>{e.title}</td>
-                  <td>{e.free ? 'Yes' : 'No'}</td>
-                  <td>{e.pro ? 'Yes' : 'No'}</td>
+                  <Td>{e.title}</Td>
+                  <Td>{e.free ? <CheckIcon /> : ''}</Td>
+                  <Td>{e.pro ? <CheckIcon /> : ''}</Td>
                 </tr>
               );
             })}
           </tbody>
         </table>
-      </div>
+      </FeatureDiv>
+      <FAQdiv>
+        <FAQtitle>Frequently Asked Questions</FAQtitle>
+        <Accordion allowToggle>
+          {Frequently_asked_questions.map((e, i) => {
+            return (
+              <AccordionItem key={i} style={{ margin: '1em 0' }}>
+                <AccordionButton style={{ border: 'none' }}>
+                  <Question flex='1' textalign='left'>
+                    {e.question}
+                  </Question>
+                  <AccordionIcon />
+                </AccordionButton>
+                <AccordionPanel style={panel}>
+                  <Answer>{e.answer}</Answer>
+                </AccordionPanel>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
+      </FAQdiv>
+      <ReviewDiv>
+        <Review>
+          <b>“</b> I have tested similar time tracking apps but they all have
+          limits. My Hours is without a doubt the most important tool I use in
+          my business. <b>”</b>
+        </Review>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <MemberName>- Kevin from St. Petersburg, FL, USA</MemberName>
+          <a href='#'>
+            Read more reviews <ArrowRightIcon />
+          </a>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+          <div>
+            <H5>MEMBERS</H5>
+            <Value>250k</Value>
+          </div>
+          <div>
+            <H5>LOGED HOURS</H5>
+            <Value>1.6b</Value>
+          </div>
+          <div>
+            <H5>AVERAGE RATING</H5>
+            <Value>4.7/5</Value>
+          </div>
+        </div>
+      </ReviewDiv>
     </div>
   );
 };

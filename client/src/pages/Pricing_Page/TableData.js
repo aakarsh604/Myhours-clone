@@ -124,4 +124,11 @@ export const Frequently_asked_questions = [
       'You can archive inactive team members while keeping their data for reporting. We do not charge for archived team members.',
   },
 ];
-export const Feature = {Track,Organize,Biling,Report,Team,Integration_and_Apps};
+export const Feature = {
+  Track,
+  Organize,
+  Biling,
+  Report,
+  Team,
+  Integration_and_Apps,
+};
