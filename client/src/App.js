@@ -1,10 +1,11 @@
-import './App.css';
+// import './App.css';
 import { Route, Routes } from 'react-router';
 import Homepage from './pages/Homepage/Homepage';
 import { Signin } from './pages/Signin/Signin';
 import Footer from './components/Footer/Footer';
 import Header from './components/Hedear/Header';
 import Usecase from './pages/UsecasePage/Usecase';
+import { PricingPage } from './pages/Pricing_Page/PricingPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Homepage />} />
         <Route path='/signup' element={<Signin />} />
         <Route path='/usecase' element={<Usecase />} />
+        <Route path='/pricing' element={<PricingPage />} />
       </Routes>
 
       <Footer />

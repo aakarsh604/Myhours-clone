@@ -5,6 +5,10 @@ import {
   AccordionPanel,
   AccordionIcon,
   AccordionItem,
+  Box,
+  Text,
+  HStack,
+  Button,
 } from '@chakra-ui/react';
 import { CheckIcon, ArrowRightIcon } from '@chakra-ui/icons';
 import {
@@ -19,7 +23,7 @@ import {
   Team,
 } from './TableData';
 import {
-  Button,
+  Buttons,
   ProButton,
   ButtonDiv,
   Div2,
@@ -36,7 +40,7 @@ import {
   FAQtitle,
   Question,
   Answer,
-  TdHead,
+  TrHead,
   Td,
   Th,
   Review,
@@ -52,7 +56,10 @@ const panel = {
 
 export const PricingPage = () => {
   return (
-    <div style={{ fontFamily: 'Avernirnextitpro, sans-serif' }}>
+    <div
+      style={{
+        fontFamily: 'Avernirnextitpro, sans-serif',
+      }}>
       <Heading1>Pick your plan</Heading1>
       <Heading2>Track time on projects with your team.</Heading2>
       <Div2>
@@ -84,7 +91,7 @@ export const PricingPage = () => {
               <Dollar>$</Dollar>
               <Dollar$>6</Dollar$>
             </div>
-            <div style={{ marginTop: '-1rem' }}>
+            <div style={{ marginTop: '1.5em' }}>
               <p>-per active team member, per month billed annually</p>
               <p>-$7 billed monthly</p>
             </div>
@@ -98,7 +105,7 @@ export const PricingPage = () => {
         </div>
       </Div2>
       <ButtonDiv>
-        <Button>Select</Button>
+        <Buttons>Select</Buttons>
         <ProButton>14 day free trial</ProButton>
       </ButtonDiv>
       <FeatureDiv>
@@ -111,9 +118,11 @@ export const PricingPage = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <TdHead>Track</TdHead>
-            </tr>
+            <TrHead>
+              <td>Track</td>
+              <td></td>
+              <td></td>
+            </TrHead>
             {Track.map((e, i) => {
               return (
                 <tr key={i}>
@@ -123,9 +132,11 @@ export const PricingPage = () => {
                 </tr>
               );
             })}
-            <tr>
-              <TdHead>Organize</TdHead>
-            </tr>
+            <TrHead>
+              <td>Organize</td>
+              <td></td>
+              <td></td>
+            </TrHead>
             {Organize.map((e, i) => {
               return (
                 <tr key={i}>
@@ -135,9 +146,11 @@ export const PricingPage = () => {
                 </tr>
               );
             })}
-            <tr>
-              <TdHead>Billing</TdHead>
-            </tr>
+            <TrHead>
+              <td>Billing</td>
+              <td></td>
+              <td></td>
+            </TrHead>
             {Biling.map((e, i) => {
               return (
                 <tr key={i}>
@@ -147,9 +160,11 @@ export const PricingPage = () => {
                 </tr>
               );
             })}
-            <tr>
-              <TdHead>Report</TdHead>
-            </tr>
+            <TrHead>
+              <td>Report</td>
+              <td></td>
+              <td></td>
+            </TrHead>
             {Report.map((e, i) => {
               return (
                 <tr key={i}>
@@ -159,9 +174,11 @@ export const PricingPage = () => {
                 </tr>
               );
             })}
-            <tr>
-              <TdHead>Team</TdHead>
-            </tr>
+            <TrHead>
+              <td>Team</td>
+              <td></td>
+              <td></td>
+            </TrHead>
             {Team.map((e, i) => {
               return (
                 <tr key={i}>
@@ -171,9 +188,11 @@ export const PricingPage = () => {
                 </tr>
               );
             })}
-            <tr>
-              <TdHead>Integration and Apps</TdHead>
-            </tr>
+            <TrHead>
+              <td>Integration and Apps</td>
+              <td></td>
+              <td></td>
+            </TrHead>
             {Integration_and_Apps.map((e, i) => {
               return (
                 <tr key={i}>
@@ -192,7 +211,12 @@ export const PricingPage = () => {
           {Frequently_asked_questions.map((e, i) => {
             return (
               <AccordionItem key={i} style={{ margin: '1em 0' }}>
-                <AccordionButton style={{ border: 'none' }}>
+                <AccordionButton
+                  style={{
+                    border: 'none',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                  }}>
                   <Question flex='1' textalign='left'>
                     {e.question}
                   </Question>
@@ -233,6 +257,51 @@ export const PricingPage = () => {
           </div>
         </div>
       </ReviewDiv>
+      <Box w='65%' m='auto' mt='3rem' marginBottom='50px'>
+        <Text align='center' fontSize={'3xl'} color='blue.700'>
+          Have questions? We're here
+        </Text>
+        <Text align='center'>
+          It's always nice to have someone to talk to when facing new software.
+          Get in touch and
+        </Text>
+        <Text align='center'>we'll try our best to help you out.</Text>
+        <HStack w='70%' m='auto'>
+          <Button
+            colorScheme='blue'
+            variant='link'
+            textDecoration='underline'
+            _hover={{ textDecoration: 'none' }}
+            align='center'
+            pt='3rem'
+            leftIcon={<CheckIcon />}
+            fontSize='md'>
+            EMAIL & LIVE CHAT
+          </Button>
+          <Button
+            colorScheme='blue'
+            variant='link'
+            textDecoration='underline'
+            _hover={{ textDecoration: 'none' }}
+            align='center'
+            pt='3rem'
+            leftIcon={<CheckIcon />}
+            fontSize='md'>
+            TRAINING FOR TEAMS
+          </Button>
+          <Button
+            colorScheme='blue'
+            variant='link'
+            textDecoration='underline'
+            _hover={{ textDecoration: 'none' }}
+            align='center'
+            pt='3rem'
+            leftIcon={<CheckIcon />}
+            fontSize='md'>
+            KNOWLEDGE BASE
+          </Button>
+        </HStack>
+      </Box>
     </div>
   );
 };

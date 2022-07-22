@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 export const Heading1 = styled.p`
   margin-bottom: 20px;
+  padding-top: 130px;
   color: #212529;
   font-size: 72px;
   font-weight: 200;
@@ -17,13 +18,13 @@ export const Heading2 = styled.h2`
 export const Heading3 = styled.h3`
   font-size: 2rem;
   color: #212529;
-  line-height: 1.2;
+  font-weight: bold;
 `;
 export const Heading4 = styled.p`
   font-family: Avernirnextitpro, sans-serif;
   color: #212529;
   font-size: 20px;
-  margin: 0 0 30px;
+  margin: 10px 0 0;
   line-height: 1.2;
 `;
 export const Div2 = styled.div`
@@ -49,8 +50,9 @@ export const List = styled.li`
   color: #212529;
   margin: 0 0 20px;
 `;
-export const Button = styled.button`
+export const Buttons = styled.button`
   width: 400px;
+  margin-left: -6em;
   padding: 10px;
   border: 1px solid grey;
   border-radius: 5px;
@@ -81,7 +83,7 @@ export const Div3 = styled.div`
   justify-content: space-between;
 `;
 export const FAQdiv = styled.div`
-  width: 70%;
+  width: 75%;
   margin: auto;
   font-family: Avernirnextitpro, sans-serif;
 `;
@@ -97,15 +99,16 @@ export const FAQtitle = styled.h2`
   color: #375d75;
 `;
 export const Question = styled.h3`
-  color: #222222;
+  color: #212529;
+  font-weight: 600;
+  font-size: 18px;
 `;
 export const Answer = styled.p`
   color: #212529;
 `;
-export const TdHead = styled.td`
+export const TrHead = styled.tr`
   background-color: #f4f4f4;
   font-size: 18px;
-  padding: 16px 10px 16px 0;
   font-weight: bold;
   color: #212529;
 `;
@@ -126,9 +129,9 @@ export const Review = styled.p`
 `;
 export const ReviewDiv = styled.div`
   width: 65%;
-  padding:40px 95px;
+  padding: 40px 95px;
   margin: auto;
-  background-color:#DCEEFA;
+  background-color: #dceefa;
 `;
 export const MemberName = styled.p`
   padding: 0px 10px;
@@ -139,7 +142,7 @@ export const Value = styled.p`
   font-size: 72px;
   color: #375d75;
   margin-top: 0;
-  font-weight:thin;
+  font-weight: thin;
 `;
 export const H5 = styled.h5`
   text-align: center;
