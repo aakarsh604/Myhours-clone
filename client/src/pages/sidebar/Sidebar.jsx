@@ -1,13 +1,16 @@
 
 import React from 'react'
-import {  BsGrid3X3GapFill,BsStopwatch,BsBriefcase } from "react-icons/bs";
+import { AiOutlineBarChart } from "react-icons/ai";
+
+import {  BsGrid3X3GapFill,BsStopwatch,BsBriefcase,BsFolder,BsPeople ,BsQuestionCircle,BsPerson,BsPhone,BsBell} from "react-icons/bs";
 import {
     Accordion,
     AccordionItem,
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-    Box
+    Box,
+    background
   } from '@chakra-ui/react'
 import styled from './sidebar.module.css'
    const  Sidebar  = ()=>{
@@ -31,25 +34,103 @@ import styled from './sidebar.module.css'
                     <BsBriefcase style={{width:"15px" , height:"15px", marginTop:"5px", marginTop:"10px" ,marginLeft:"14px" }} />
                     <p>Project</p>
                 </div>
-                <Accordion>
+                <Accordion  >
   <AccordionItem  style={{border:"none"}}>
     <h2>
       <AccordionButton>
         <Box flex='1' textAlign='left'  border="none">
-          Section 1 title
+        <div className={styled.icon3}>
+                    < AiOutlineBarChart style={{width:"20px" , height:"20px", marginTop:"10px" ,marginLeft:"16px"}} />
+                    <p>Report</p>
+                </div>
         </Box>
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionPanel pb={4}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+    <AccordionPanel  pb={5}  style={{backgroundColor :"" , textAlign:"start" ,color:"gray"}}>
+    <div  style={{marginLeft:"37px"}}>
+    <p style={{cursor: 'pointer'}}>Dashboard</p>
+     <p style={{cursor: 'pointer'}}>Activity</p>
+     <p style={{cursor: 'pointer'}}>Team pivot</p>
+     <p style={{cursor: 'pointer'}}>Economy</p>
+     <p style={{cursor: 'pointer'}}>Timesheet</p>
+    </div>
+    
+   
     </AccordionPanel>
   </AccordionItem>
   </Accordion>
-
+  <Accordion >
+  <AccordionItem  style={{border:"none"}}>
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left'  border="none">
+        <div className={styled.icon3}>
+                    < BsFolder style={{width:"18px" , height:"15px", marginTop:"10px" ,marginLeft:"16px"}} />
+                    <p>Clients</p>
+                </div>
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel  pb={5}  style={{backgroundColor :"" , textAlign:"start" ,color:"gray"}}>
+    <div  style={{marginLeft:"37px"}}>
+    <p style={{cursor: 'pointer'}}>Clients</p>
+     <p style={{cursor: 'pointer'}}>Invoices</p>
+     <p style={{cursor: 'pointer'}}>Uninvoiced</p>
+   
+    </div>
+    
+   
+    </AccordionPanel>
+  </AccordionItem>
+  </Accordion>
+  <Accordion  >
+  <AccordionItem  style={{border:"none"}}>
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left'  border="none">
+        <div className={styled.icon3}>
+                    < BsPeople style={{width:"20px" , height:"18px", marginTop:"10px" ,marginLeft:"16px"}} />
+                    <p>Team</p>
+                </div>
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel  pb={5}  style={{backgroundColor :"" , textAlign:"start" ,color:"gray"}}>
+    <div  style={{marginLeft:"37px"}}>
+    <p style={{cursor: 'pointer'}}>Team members</p>
+     <p style={{cursor: 'pointer'}}>Teams</p>
+    
+   
+    </div>
+    
+   
+    </AccordionPanel>
+  </AccordionItem>
+  </Accordion>
+   <div className={styled.pro}>
+     <p> Pro trial expires in 10 days</p>
+     <h1>Keep/Leave the Pro</h1>
+   </div>
+   <div className={styled.icon2}>
+                    <BsQuestionCircle style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
+                    <p>Help</p>
+                </div>
+                <div className={styled.icon2}>
+                    <BsPhone style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
+                    <p>Apps</p>
+                </div>
+                <div className={styled.icon2}>
+                    <BsBell style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
+                    <p>What's new</p>
+                </div>
+                <div className={styled.icon2}>
+                    <BsPerson style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
+                    <p>sagar</p>
+                </div>
+   
             </div>
         </div>
         </>
