@@ -1,10 +1,10 @@
 import React from "react"
-import "./Support.css"
+import styled from"./Support.module.css"
 const Support = ()=>{
    
     return (
         <>
-        <div  className= "supportmaindiv">
+        <div  className= {}}>
             <p className="support_here">We're here</p>
             <p  className="support_hours">We typically respond in less than 24 hours on business days. Contact us via email, live chat or the form below.</p>
             <p className="support_read"><samp  style={{color:"#53bff2 ",textDecoration: "underline", fontWeight: "bold" }}>Read our help guides</samp> or send us a message to get detailed help.</p>
