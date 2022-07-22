@@ -1,4 +1,5 @@
 {
+
   "name": "server",
   "version": "1.0.0",
   "description": "",
@@ -15,5 +16,7 @@
     "express": "^4.18.1",
     "mongoose": "^6.4.5",
     "nodemon": "^2.0.19"
+
+    
   }
 }

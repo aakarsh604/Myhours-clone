@@ -1,10 +1,12 @@
-const express = require("express");
+
 const fs = require("fs");
 const mongodb = require("mongodb");
 const cors = require("cors")
 const  Team = require("./project/route/teamRoute.js")
 const app = express();
 const clientRouter = require("./project/route/clientsRoute")
+const authRouter = require("./Routes/auth.routes");
+const connnection = require("./database")
 const PORT = process.env.PORT || 4040
 const {connection} = require("./project/database/teamMember")
 
@@ -25,3 +27,4 @@ app.use(express.json());
   }
   console.log("server starting");
 });
+

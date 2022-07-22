@@ -1,0 +1,39 @@
+[
+        {
+            "id" : 1,
+            "imgurl" : "https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fbf86f7f19477d80b3be5ec_Billable%20settings-p-500.png",
+            "title" : "Project billing",
+            "description" : "Choose the billing method that is fair for your client and represents your actual work."
+        },
+        {
+            "id" : 2,
+            "imgurl" : "https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fc0abed0af890cbb40c6d33_HP-3-1-p-500.png",
+            "title" : "Time reports & Project analytics",
+            "description" : "Always know how much time has been spent on your projects and tasks in a specific period of time with easy-to-create reports."
+        },
+        {
+            "id" : 3,
+            "imgurl" : "https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fc4e6828a88f435b7c4ac2a_HIW-4-p-500.png",
+            "title" : "Attendance & Absence",
+            "description" : "Know who was present at work and track absences and the reasons behind them. Make your payroll faster and more accurate by exporting all the tracked data. Time, attendance and absence tracking in one streamlined solution."
+        },
+        {
+            "id" : 4,
+            "imgurl" : "https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fc91420b5951fed1bb2a187_Chickens(1).png",
+            "title" : "Expense tracking",
+            "description" : "Get expenses of your mind and into your invoice, without losing a cent or a receipt."
+        },
+        {
+            "id" : 5,
+            "imgurl" : "https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fc91420b5951fed1bb2a187_Chickens(1).png",
+            "title" : "Calculating project profitability",
+            "description" : "Grow your business faster by prioritizing the projects that are worth your time, effort and resources."
+        },
+        {
+            "id" : 6,
+            "imgurl" : "https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fd20dcf9d62a4f65fea8acd_Frame%2027(1)(1)-p-500.png",
+            "title" : "Timesheet time tracking",
+            "description" : "Track time just as you are used to, but simpler Because you are tired of using unmanageable stacks of paper, excel templates, or complex apps week in week out."
+        }
+    
+    ]
