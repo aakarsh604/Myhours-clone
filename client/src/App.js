@@ -6,12 +6,11 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Hedear/Header';
 import Usecase from './pages/UsecasePage/Usecase';
 import { PricingPage } from './pages/Pricing_Page/PricingPage';
-import Sidebar from "./pages/sidebar/Sidebar.jsx"
 
 function App() {
   return (
     <div className='App'>
-      {/* <Header />
+      <Header />
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/signup' element={<Signin />} />
@@ -19,8 +18,7 @@ function App() {
         <Route path='/pricing' element={<PricingPage />} />
       </Routes>
 
-      <Footer /> */}
-       <Sidebar/>
+      <Footer />
     </div>
   );
 }
