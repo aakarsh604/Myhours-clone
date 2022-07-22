@@ -4,10 +4,10 @@ const Support = ()=>{
    
     return (
         <>
-        <div  className= {}}>
-            <p className="support_here">We're here</p>
-            <p  className="support_hours">We typically respond in less than 24 hours on business days. Contact us via email, live chat or the form below.</p>
-            <p className="support_read"><samp  style={{color:"#53bff2 ",textDecoration: "underline", fontWeight: "bold" }}>Read our help guides</samp> or send us a message to get detailed help.</p>
+        <div  className= {styled.supportmaindiv }>
+            <p className={styled.support_here}>We're here</p>
+            <p  className={styled.support_hours}>We typically respond in less than 24 hours on business days. Contact us via email, live chat or the form below.</p>
+            <p className={styled.support_read}><samp  style={{color:"#53bff2 ",textDecoration: "underline", fontWeight: "bold" }}>Read our help guides</samp> or send us a message to get detailed help.</p>
             <div style={{marginLeft:"150PX",justifyContent:"center",marginTop:"50px",marginBottom:"100PX"}}><iframe width="800" height="400" box-Shadow=" rgba(0, 0, 0, 0.35) 0px 5px 15px"  src="https://www.youtube.com/embed/VpMysclixyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             <br/>
             <hr></hr>
