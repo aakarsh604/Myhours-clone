@@ -1,3 +1,4 @@
+
 import '../../App.css';
 import {
   Box,
@@ -16,6 +17,8 @@ import { ArrowForwardIcon, CheckIcon } from '@chakra-ui/icons';
 
 function Homepage() {
   return (
+
+
     <Box fontFamily={'sans-serif'} letterSpacing={2} pt={'10rem'}>
       {/* 1st part */}
       <Box w={'80%'} m={'auto'}>
