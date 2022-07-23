@@ -17,7 +17,7 @@ import EditClient from './pages/Client/EditClient';
 function App() {
   return (
     <div className='App'>
-     
+    
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/signup' element={<Signup/>} />
