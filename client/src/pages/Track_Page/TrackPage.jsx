@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button, Flex, Text, Input, Box } from '@chakra-ui/react';
 import {
   CalendarIcon,
   ArrowForwardIcon,
@@ -13,7 +14,9 @@ import {
   AiOutlineSmallDash,
   AiOutlineMenu,
   AiOutlineStar,
-  AiOutlineShopping,
+  AiOutlineCheck,
+  AiFillEdit,
+  AiFillFolderOpen,
 } from 'react-icons/ai';
 import { useStopwatch } from './useStopwatch';
 
@@ -53,8 +56,8 @@ const Nav2Btn = styled.button`
   background: white;
   cursor: pointer;
 `;
-// const days = ['Sun', 'Mon', 'Tue', 'Thu', 'Fri', 'Sat'];
 export const TrackPage = () => {
+  const [status, setStatus] = useState(false);
   const Data = JSON.parse(localStorage.getItem('clientData')) || [];
   console.log(Data);
   const [open, setOpen] = useState(false);
@@ -62,63 +65,97 @@ export const TrackPage = () => {
   const nows = now.toString().split(' ');
   const [date, setDate] = useState(now.getDate());
   return (
-    <Container>
-      <Navbar>
-        <div style={{ display: 'flex', gap: '15px' }}>
-          <CurrentDay>
+    <Box w='80%' p='20px 50px'>
+      {/* Navbar1 */}
+      <Flex justify='space-between' fontSize='25' pb={'7'}>
+        <Flex gap='5'>
+          <Text>
             Today, {date} {nows[1]}
-          </CurrentDay>
-          <InputDate
-            type='date'
-            style={{ border: 'none', outline: 'none', color: '#375D75' }}
-          />
-          <ArrowBackIcon style={{ marginTop: '1.7em', fontSize: '1.3em' }} />
-          <ArrowForwardIcon style={{ marginTop: '1.7em', fontSize: '1.3em' }} />
-          <AiOutlineHome style={{ marginTop: '1.7em', fontSize: '1.3em' }} />
-        </div>
+          </Text>
+          <Input type='date' w='50px' />
+          <ArrowBackIcon mt={'1'} />
+          <ArrowForwardIcon mt={'1'} />
+          <AiOutlineHome mt={'1'} />
+        </Flex>
         <Stopwatch />
-      </Navbar>
-      <Navbar2>
-        <div>
-          <AddBtn
+      </Flex>
+      {/* Navbar2 */}
+      <Flex justify='space-between' pb={'7'}>
+        <Box>
+          <Button
+            gap='2'
+            color='#3b8fc2'
             onClick={() => {
               open ? setOpen(false) : setOpen(true);
             }}>
             <AiOutlinePlus /> Add time log
-          </AddBtn>
-        </div>
-        <div style={{ display: 'flex', gap: '20px' }}>
-          <Nav2Btn>
-            <AiOutlineSmallDash style={{ fontSize: '22px' }} />
-          </Nav2Btn>
-          <Nav2Btn>
-            <AiOutlineMenu style={{ paddingTop: '' }} /> Timeline
-          </Nav2Btn>
-          <Nav2Btn>
+          </Button>
+        </Box>
+        <Flex gap='5'>
+          <Button>
+            <AiOutlineSmallDash />
+          </Button>
+          <Button gap='2'>
+            <AiOutlineMenu /> Timeline
+          </Button>
+          <Button gap='2'>
             <AiOutlineStar /> Favourite logs
-          </Nav2Btn>
-        </div>
-      </Navbar2>
-      {open ? <Form status={setOpen} /> : ''}
+          </Button>
+        </Flex>
+      </Flex>
+      {/* Form */}
+      {open ? (
+        <Form setOpen={setOpen} status={status} setStatus={setStatus} />
+      ) : (
+        ''
+      )}
+      {/* Client data */}
       {Data.map((e, i) => {
         return (
-          <div key={i}>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <div>
-                <p style={!e.client ? { color: 'grey' } : {}}>
-                  {!e.client ? 'Add a Project, task or tag' : e.client} {e.task}{' '}
-                  {e.tags}
-                </p>
-                <p style={!e.desc ? { color: 'grey' } : {}}>
+          <Box key={i}>
+            <Flex justify={'space-between'} p={'5'}>
+              <Box>
+                <Flex gap={'2'} color='#375D75'>
+                  {!e.client ? (
+                    <AiFillEdit style={{ marginTop: '4px' }} />
+                  ) : (
+                    <AiFillFolderOpen style={{ marginTop: '4px' }}/>
+                  )}
+                  <Text style={!e.client ? { color: 'grey' } : {}}>
+                    {!e.client ? 'Add a Project, task or tag' : e.client}
+                  </Text>
+                  <Text>
+                    {e.task ? (
+                      <AiOutlineCheck
+                        color='black'
+                        style={{ marginTop: '4px' }}
+                      />
+                    ) : (
+                      ''
+                    )}
+                  </Text>
+                  <Text>{e.task ? e.task : ''}</Text>
+                  <Text
+                    bg={'#CCE5FF'}
+                    color={'#0062CC'}
+                    fontSize={'12px'}
+                    p={'2px 5px'}>
+                    {e.tags ? e.tags : ''}
+                  </Text>
+                </Flex>
+                <Text
+                  color={'#687481'}
+                  textAlign={'left'}
+                  style={!e.desc ? { color: 'grey' } : {}}>
                   {!e.desc ? 'Empty Description' : e.desc}
-                </p>
-              </div>
+                </Text>
+              </Box>
               <Stopwatch />
-            </div>
+            </Flex>
             <hr />
-          </div>
+          </Box>
         );
       })}
-    </Container>
+    </Box>
   );
 };
