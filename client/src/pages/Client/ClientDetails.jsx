@@ -136,7 +136,7 @@ const ClientDetails = () => {
                           {isOpen ? <SettingsIcon boxSize="5" mb="1" /> : <SettingsIcon boxSize="5" mb="1" />}
                         </MenuButton>
                         <MenuList>
-                          <MenuItem >Edit</MenuItem>
+                          <MenuItem ><Link to={`/edit/${client.id}`}>Edit </Link></MenuItem>
                           <MenuItem >
                             Archive
                           </MenuItem>
