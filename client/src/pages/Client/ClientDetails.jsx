@@ -31,6 +31,7 @@ import {
   SettingsIcon,
 } from "@chakra-ui/icons";
 import axios from 'axios';
+import {Link, useNavigate} from 'react-router-dom'
 
 const ClientDetails = () => {
   const [clients, setClients] = useState([]);
@@ -70,16 +71,17 @@ const ClientDetails = () => {
   useEffect(() => {
     clientsData();
   }, [handleDelete,setClients]);
+  const navigate = useNavigate()
 
   return (
-    <Box width="85%" p="5">
-      <Flex>
+    <Box width="85%"  pt='3rem'>
+     <Flex>
         <Heading size="xl" fontWeight="500">
           Clients
         </Heading>
         <Spacer />
-        <Button colorScheme="blue" leftIcon={<AddIcon />}>
-          New Client
+        <Button  colorScheme="blue" leftIcon={<AddIcon />}>
+          <Link to="/addClient">New Client</Link>
         </Button>
       </Flex>
       <Box mt="4">
@@ -136,7 +138,7 @@ const ClientDetails = () => {
                           {isOpen ? <SettingsIcon boxSize="5" mb="1" /> : <SettingsIcon boxSize="5" mb="1" />}
                         </MenuButton>
                         <MenuList>
-                          <MenuItem ><Link to={`/edit/${client.id}`}>Edit </Link></MenuItem>
+                          <MenuItem ><Link to={`/editClient/${client.id}`}>Edit </Link></MenuItem>
                           <MenuItem >
                             Archive
                           </MenuItem>

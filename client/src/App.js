@@ -10,6 +10,9 @@ import Signin from './pages/Signin/Signin';
 import Teamdisplay from "./pages/Teams/Teamdisplay";
 import AddTeam from "./pages/Teams/AddTeam";
 import EditTeam from "./pages/Teams/EditTeam";
+import ClientDetails from './pages/Client/ClientDetails';
+import NewClient from './pages/Client/NewClient';
+import EditClient from './pages/Client/EditClient';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
         <Route path="/teams" element={<Teamdisplay/>} />
         <Route path="/add" element={<AddTeam />} />
         <Route path="/edit/:id" element={<EditTeam />} />
+        <Route path="/Clients" element={<ClientDetails/>} />
+        <Route path="/addClient" element={<NewClient />} />
+        <Route path="/editClient/:id" element={<EditClient />} />
       </Routes>
       <Footer />
     </div>

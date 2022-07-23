@@ -9,8 +9,7 @@ import {
  
   Button
 } from "@chakra-ui/react";
-import { FormControl, FormLabel } from "@chakra-ui/react";
-import styles from "./Team.module.css";
+import { FormControl, FormLabel } from "@chakra-ui/react"
 import axios from "axios";
 import {useParams} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
@@ -55,7 +54,7 @@ const handlePatch = async () => {
 }
 
   return (
-    <Box w='40%' m='auto'>
+    <Box w='40%' m='auto' pt='6rem' pb='2rem'>
     <Heading>New client</Heading>
     <FormControl  onSubmit={handleSubmit} style={{width:'80%'}}>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.name}>NAME</FormLabel>

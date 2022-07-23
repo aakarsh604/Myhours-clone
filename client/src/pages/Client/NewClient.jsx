@@ -28,7 +28,7 @@ const NewClient = () => {
   }
  
   return (
-   <Box w='40%' m='auto'>
+   <Box w='40%' m='auto' pt='6rem' pb='2rem'>
       <Heading>New client</Heading>
       <FormControl  onSubmit={handleSubmit} style={{width:'80%'}}>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>NAME</FormLabel>
