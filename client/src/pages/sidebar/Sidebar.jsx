@@ -34,7 +34,7 @@ import styled from './sidebar.module.css'
                     <BsBriefcase style={{width:"15px" , height:"15px", marginTop:"5px", marginTop:"10px" ,marginLeft:"14px" }} />
                     <p>Project</p>
                 </div>
-                <Accordion  >
+                <Accordion>
   <AccordionItem  style={{border:"none"}}>
     <h2>
       <AccordionButton>
