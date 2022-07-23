@@ -72,7 +72,7 @@ function Homepage() {
           />
         </HStack>
       </Box>
-      <HStack w={'85%'} m={'auto'} mt={'1rem'} spacing={20}>
+      <HStack w={'80%'} m={'auto'} mt={'1rem'} spacing={20}>
         <Image
           boxSize='120px'
           objectFit='contain'
@@ -110,7 +110,7 @@ function Homepage() {
           alt=''
         />
       </HStack>
-      <Flex letterSpacing={'0'} w={'85%'} m={'auto'} spacing={3} mt={'40px'}>
+      <Flex letterSpacing={'0'} w={'80%'} m={'auto'} spacing={3} mt={'40px'}>
         <Box w={'40%'} align='left'>
           <Text fontSize={'3xl'} color='blue.700'>
             <b>Coordinate your team, projects and tasks</b>
@@ -134,7 +134,7 @@ function Homepage() {
           src='https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fd7199052d14ec5e2a6c813_HP-1.png'
         />
       </Flex>
-      <Flex letterSpacing={'0'} w={'85%'} m={'auto'} spacing={3} mt={'40px'}>
+      <Flex letterSpacing={'0'} w={'80%'} m={'auto'} spacing={3} mt={'40px'}>
         <Image
           mr={'15%'}
           boxSize={'50%'}
@@ -157,7 +157,7 @@ function Homepage() {
           </Text>
         </Box>
       </Flex>
-      <Flex letterSpacing={'0'} w={'85%'} m={'auto'} spacing={3} mt={'40px'}>
+      <Flex letterSpacing={'0'} w={'80%'} m={'auto'} spacing={3} mt={'40px'}>
         <Box w={'40%'} align='left'>
           <Text fontSize={'3xl'} color='blue.700'>
             <b>Create great-looking reports</b>
@@ -197,7 +197,7 @@ function Homepage() {
           See how My Hours works in detail
         </Button>
       </Box>
-      <Box w={'85%'} m={'auto'}>
+      <Box w={'80%'} m={'auto'}>
         <Text
           fontStyle={'sans-serif'}
           align={'center'}
@@ -347,7 +347,7 @@ function Homepage() {
           </Box>
         </SimpleGrid>
       </Box>
-      <Box w={'85%'} m={'auto'} mt={'2rem'} letterSpacing={0}>
+      <Box w={'80%'} m={'auto'} mt={'2rem'} letterSpacing={0}>
         <Text m={'auto'} fontSize={'3xl'} color='blue.700'>
           My Hours has changed the way our customers work
         </Text>
@@ -595,7 +595,7 @@ function Homepage() {
       </Box>
       <HStack
         letterSpacing={0}
-        w={'85%'}
+        w={'80%'}
         m={'auto'}
         mt={'3rem'}
         mb={'3rem'}
