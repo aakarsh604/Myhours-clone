@@ -50,7 +50,7 @@ const AddTeam = () => {
   const postData = async () => {
     console.log(form);
     await axios.post("http://localhost:8080/teams", form);
-    navigate("/");
+    navigate("/teams");
   };
 
   return (
