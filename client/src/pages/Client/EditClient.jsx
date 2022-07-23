@@ -59,7 +59,7 @@ const handlePatch = async () => {
     <FormControl  onSubmit={handleSubmit} style={{width:'80%'}}>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.name}>NAME</FormLabel>
       <Input onChange={handleChange} w='100%' variant='outline' name='name' ></Input>
-      <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.contactPerson}>CONTACT PERSON</FormLabel>
+      <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.contactperson}>CONTACT PERSON</FormLabel>
       <Input onChange={handleChange} w='100%' variant='outline' name='contactPerson'  ></Input>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.email}>EMAIL</FormLabel>
       <Input type='email' onChange={handleChange} w='100%' variant='outline' name='email' ></Input>
@@ -70,15 +70,15 @@ const handlePatch = async () => {
       <HStack spacing={1} justifyContent='space-betwee6'>
       <Box w='46%'>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX NAME</FormLabel>
-      <Input onChange={handleChange}  value={form.taxName} w='100%' variant='outline' name='taxName' ></Input>
+      <Input onChange={handleChange}  value={form.taxname} w='100%' variant='outline' name='taxName' ></Input>
       </Box>
      <Box w='46%'>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX PERCENTAGE</FormLabel>
-      <Input type='number' onChange={handleChange}  value={form.taxPercentage} w='100%' variant='outline' name='taxPercentage' ></Input>
+      <Input type='number' onChange={handleChange}  value={form.taxpercentage} w='100%' variant='outline' name='taxPercentage' ></Input>
       </Box>
     </HStack>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX NUMBER</FormLabel>
-      <Input onChange={handleChange} w='100%'  value={form.taxNumber} variant='outline' name='taxNumber' ></Input>
+      <Input onChange={handleChange} w='100%'  value={form.taxnumber} variant='outline' name='taxNumber' ></Input>
       <Button
         fontSize={"lg"}
           fontWeight={400}

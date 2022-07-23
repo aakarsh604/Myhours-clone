@@ -17,7 +17,7 @@ import EditClient from './pages/Client/EditClient';
 function App() {
   return (
     <div className='App'>
-      <Header />
+     
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/signup' element={<Signup/>} />
@@ -31,7 +31,7 @@ function App() {
         <Route path="/addClient" element={<NewClient />} />
         <Route path="/editClient/:id" element={<EditClient />} />
       </Routes>
-      <Footer />
+      
     </div>
   );
 }

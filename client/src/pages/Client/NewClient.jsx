@@ -34,7 +34,7 @@ const NewClient = () => {
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>NAME</FormLabel>
         <Input onChange={handleChange} w='100%' variant='outline' name='name' ></Input>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>CONTACT PERSON</FormLabel>
-        <Input onChange={handleChange} w='100%' variant='outline' name='contactPerson'  ></Input>
+        <Input onChange={handleChange} w='100%' variant='outline' name='contactperson'  ></Input>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>EMAIL</FormLabel>
         <Input type='email' onChange={handleChange} w='100%' variant='outline' name='email' ></Input>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>PHONE</FormLabel>
@@ -44,15 +44,15 @@ const NewClient = () => {
         <HStack spacing={1} justifyContent='space-betwee6'>
         <Box w='46%'>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX NAME</FormLabel>
-        <Input onChange={handleChange} w='100%' variant='outline' name='taxName' ></Input>
+        <Input onChange={handleChange} w='100%' variant='outline' name='taxname' ></Input>
         </Box>
        <Box w='46%'>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX PERCENTAGE</FormLabel>
-        <Input type='number' onChange={handleChange} w='100%' variant='outline' name='taxPercentage' ></Input>
+        <Input type='number' onChange={handleChange} w='100%' variant='outline' name='taxpercentage' ></Input>
         </Box>
       </HStack>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX NUMBER</FormLabel>
-        <Input onChange={handleChange} w='100%' variant='outline' name='taxNumber' ></Input>
+        <Input onChange={handleChange} w='100%' variant='outline' name='taxnumber' ></Input>
         <Button
           fontSize={"lg"}
             fontWeight={400}
