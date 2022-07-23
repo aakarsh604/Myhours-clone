@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   CalendarIcon,
   ArrowForwardIcon,
@@ -13,12 +13,14 @@ import {
   AiOutlineSmallDash,
   AiOutlineMenu,
   AiOutlineStar,
+  AiOutlineShopping,
 } from 'react-icons/ai';
+import { useStopwatch } from './useStopwatch';
 
 const Container = styled.div`
   width: 66%;
   padding: 20px 100px;
-  text-align:left;
+  text-align: left;
 `;
 const Navbar = styled.div`
   color: #375d75;
@@ -51,16 +53,14 @@ const Nav2Btn = styled.button`
   background: white;
   cursor: pointer;
 `;
-
 // const days = ['Sun', 'Mon', 'Tue', 'Thu', 'Fri', 'Sat'];
 export const TrackPage = () => {
+  const Data = JSON.parse(localStorage.getItem('clientData')) || [];
+  console.log(Data);
   const [open, setOpen] = useState(false);
   const now = new Date();
   const nows = now.toString().split(' ');
-  // console.log(nows);
   const [date, setDate] = useState(now.getDate());
-  const [month, setMonth] = useState();
-  // console.log(nows);
   return (
     <Container>
       <Navbar>
@@ -80,7 +80,10 @@ export const TrackPage = () => {
       </Navbar>
       <Navbar2>
         <div>
-          <AddBtn onClick={() => setOpen(true)}>
+          <AddBtn
+            onClick={() => {
+              open ? setOpen(false) : setOpen(true);
+            }}>
             <AiOutlinePlus /> Add time log
           </AddBtn>
         </div>
@@ -97,6 +100,25 @@ export const TrackPage = () => {
         </div>
       </Navbar2>
       {open ? <Form status={setOpen} /> : ''}
+      {Data.map((e, i) => {
+        return (
+          <div key={i}>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div>
+                <p style={!e.client ? { color: 'grey' } : {}}>
+                  {!e.client ? 'Add a Project, task or tag' : e.client} {e.task}{' '}
+                  {e.tags}
+                </p>
+                <p style={!e.desc ? { color: 'grey' } : {}}>
+                  {!e.desc ? 'Empty Description' : e.desc}
+                </p>
+              </div>
+              <Stopwatch />
+            </div>
+            <hr />
+          </div>
+        );
+      })}
     </Container>
   );
 };

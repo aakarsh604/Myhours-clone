@@ -38,19 +38,31 @@ const Heading = styled.p`
   font-size: 23px;
   color: #375d75;
 `;
+const Btn = styled.button`
+  background-color: #29aa60;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 30px 10px;
+  padding: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: #007500;
+  }
+`;
 export const Form = ({ status }) => {
   const Data = JSON.parse(localStorage.getItem('clientData')) || [];
-  console.log('json', Data);
+  // console.log('json', Data);
   const [client, setClient] = useState('');
   const [task, setTask] = useState('');
   const [tags, setTags] = useState('');
   const [desc, setDesc] = useState('');
   const [data, setData] = useState(Data);
-  console.log(data);
+  // console.log(data);
   const handleSubmit = () => {
-    setData([...data, { client: client, task: task, tags: tags, desc: desc }]);
-    console.log(data);
-    localStorage.setItem('clientData', JSON.stringify(data));
+    setData([{ client: client, task: task, tags: tags, desc: desc }, ...data]);
+    // console.log(data);
+    localStorage.setItem('clientData', JSON.stringify([...data]));
   };
   const handleStart = () => {
     status(false);
@@ -63,7 +75,6 @@ export const Form = ({ status }) => {
       <Heading style={{ marginLeft: '20px' }}>
         Add a time log <SettingsIcon style={{ fontSize: '15px' }} />
       </Heading>
-
       <MainDiv style={{ display: 'flex' }}>
         <Div1>
           <Label>CLIENT & PROJECT</Label>
@@ -120,9 +131,9 @@ export const Form = ({ status }) => {
           <br />
         </Div2>
       </MainDiv>
-      <button onClick={handleSubmit}>Start Timer</button>
-      <button onClick={handleStart}>Start & close</button>
-      <button onClick={handleClose}>Cancel</button>
+      <Btn onClick={handleSubmit}>Start Timer</Btn>
+      <Btn onClick={handleStart}>Start & close</Btn>
+      <Btn onClick={handleClose}>Cancel</Btn>
     </div>
   );
 };
