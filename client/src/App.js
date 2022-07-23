@@ -7,6 +7,9 @@ import Usecase from './pages/UsecasePage/Usecase';
 import { PricingPage } from './pages/Pricing_Page/PricingPage';
 import Signup from './pages/Signup/Signup';
 import Signin from './pages/Signin/Signin';
+import Teamdisplay from "./pages/Teams/Teamdisplay";
+import AddTeam from "./pages/Teams/AddTeam";
+import EditTeam from "./pages/Teams/EditTeam";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path='/signin' element={<Signin/>} />
         <Route path='/usecase' element={<Usecase />} />
         <Route path='/pricing' element={<PricingPage />} />
+        <Route path="/teams" element={<Teamdisplay/>} />
+        <Route path="/add" element={<AddTeam />} />
+        <Route path="/edit/:id" element={<EditTeam />} />
       </Routes>
       <Footer />
     </div>

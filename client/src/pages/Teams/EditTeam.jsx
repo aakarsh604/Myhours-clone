@@ -65,7 +65,7 @@ const EditTeam = () => {
 
 const handlePatch = async () => {
     await axios.put(`http://localhost:8080/teams/${id}`, form);
-    navigate("/");
+    navigate("/teams");
 }
 
   return (
