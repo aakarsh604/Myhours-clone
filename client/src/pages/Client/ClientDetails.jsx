@@ -21,6 +21,7 @@ import {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
+  HStack,
 } from "@chakra-ui/react";
 import {
   AddIcon,
@@ -32,6 +33,7 @@ import {
 } from "@chakra-ui/icons";
 import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom'
+import Sidebar from "../sidebar/Sidebar";
 
 const ClientDetails = () => {
   const [clients, setClients] = useState([]);
@@ -74,6 +76,11 @@ const ClientDetails = () => {
   const navigate = useNavigate()
 
   return (
+    <Flex w='100%'>
+    <Box>
+      <Sidebar />
+    </Box>
+    <Spacer/>
     <Box width="85%"  pt='3rem'>
      <Flex>
         <Heading size="xl" fontWeight="500">
@@ -84,9 +91,9 @@ const ClientDetails = () => {
           <Link to="/addClient">New Client</Link>
         </Button>
       </Flex>
-      <Box mt="4">
-        <Input w="270px" placeholder="Search by Team member name" />
-      </Box>
+      <HStack mt="4">
+        <Input w="270px" placeholder="Search by Client name" />
+      </HStack>
 
       <TableContainer mt="5">
         <Table size="md">
@@ -154,6 +161,7 @@ const ClientDetails = () => {
         </Table>
       </TableContainer>
     </Box>
+    </Flex>
   );
 };
 

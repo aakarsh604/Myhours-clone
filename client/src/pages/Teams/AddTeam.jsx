@@ -23,6 +23,7 @@ import styles from "./Team.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+
 const AddTeam = () => {
   const [form, setForm] = useState({});
   const navigate = useNavigate();
@@ -54,6 +55,7 @@ const AddTeam = () => {
   };
 
   return (
+    
     <Box w="85%" mb="50">
       <Box w="55%" m="auto">
         <Heading fontWeight="500" mt="30">
@@ -240,6 +242,7 @@ const AddTeam = () => {
         </FormControl>
       </Box>
     </Box>
+   
   );
 };
 

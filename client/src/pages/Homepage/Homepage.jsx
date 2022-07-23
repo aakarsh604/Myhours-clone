@@ -15,12 +15,14 @@ import {
 import React from 'react';
 import {useNavigate} from 'react-router-dom'
 import { ArrowForwardIcon, CheckIcon } from '@chakra-ui/icons';
-
+import Header from '../../components/Hedear/Header';
+import Footer from '../../components/Footer/Footer';
 function Homepage() {
   const navigate = useNavigate();
   return (
 
-
+    <Box>
+      <Header />
     <Box fontFamily={'sans-serif'} letterSpacing={2} pt={'10rem'}>
       {/* 1st part */}
       <Box w={'80%'} m={'auto'}>
@@ -663,6 +665,8 @@ function Homepage() {
           </Text>
         </Box>
       </HStack>
+    </Box>
+    <Footer/>
     </Box>
   );
 }
