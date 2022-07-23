@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../components/Hedear/Header';
 import {
   Accordion,
   AccordionButton,
@@ -50,7 +49,6 @@ import {
   Value,
   H5,
 } from './Style';
-import Footer from '../../components/Footer/Footer';
 const panel = {
   width: '93%',
   margin: 'auto',
@@ -59,7 +57,6 @@ const panel = {
 export const PricingPage = () => {
   return (
     <div>
-      <Header />
       <div
         style={{
           fontFamily: 'Avernirnextitpro, sans-serif',
@@ -307,7 +304,6 @@ export const PricingPage = () => {
             </Button>
           </HStack>
         </Box>
-        <Footer />
       </div>
     </div>
   );
