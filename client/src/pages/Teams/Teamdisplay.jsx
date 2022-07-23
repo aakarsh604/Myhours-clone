@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -15,8 +15,21 @@ import {
   Tbody,
 } from "@chakra-ui/react";
 import { AddIcon, ArrowUpIcon, ExternalLinkIcon, EditIcon } from "@chakra-ui/icons";
+import {Link} from "react-router-dom";
+import axios from "axios";
 
 const Teamdisplay = () => {
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+    getData();
+},[]);
+
+const getData = async () => {
+    const r = await axios("http://localhost:8080/teams");
+    setData(r.data);
+}
+
   return (
     <Box width="85%" p="5">
       <Flex>
@@ -25,7 +38,7 @@ const Teamdisplay = () => {
         </Heading>
         <Spacer />
         <Button colorScheme="blue" leftIcon={<AddIcon />}>
-          New Team Member
+          <Link to="/add">New Team Member</Link>
         </Button>
       </Flex>
       <Box mt="4">
@@ -47,16 +60,18 @@ const Teamdisplay = () => {
             </Tr>
           </Thead>
           <Tbody>
-            <Tr>
-              <Td fontSize="14">Aakarsh</Td>
+            {data && data.map((el, ind) => (
+              <Tr key={ind}>
+              <Td fontSize="14">{el.name}</Td>
               <Td fontSize="14" cursor="pointer" color="blue" _hover={{color : "darkBlue"}}>View Activity <ExternalLinkIcon mb="1"/> </Td>
-              <Td fontSize="14">aakarsh604@gmail.com</Td>
-              <Td fontSize="14" isNumeric>{`₹ 50.00`}</Td>
-              <Td fontSize="14" isNumeric>{`₹ 50.00`}</Td>
-              <Td fontSize="14">Admin</Td>
+              <Td fontSize="14">{el.email}</Td>
+              <Td fontSize="14" isNumeric>{`₹ ${el.laborRate}.00`}</Td>
+              <Td fontSize="14" isNumeric>{`₹ ${el.billableRate}.00`}</Td>
+              <Td fontSize="14">{el.role}</Td>
               <Td fontSize="14">Active</Td>
-              <Td fontSize="14" cursor="pointer" _hover={{fontWeight : 500}}>Edit <EditIcon mb="1"/></Td>
+              <Td fontSize="14" cursor="pointer" _hover={{fontWeight : 500}}><Link to={`/edit/${el.id}`}>Edit </Link><EditIcon mb="1"/></Td>
             </Tr>
+            ))}
           </Tbody>
         </Table>
       </TableContainer>

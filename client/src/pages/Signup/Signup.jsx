@@ -26,7 +26,7 @@ const Signup = () => {
           h="35"
           src="https://allhoursproductb0b1.blob.core.windows.net/static-files/myhours_logo_icon.svg"
         />
-        <Heading fontSize="26" fontWeight="700" mt="30">
+        <Heading fontSize="26" fontWeight="700" mt="30" textAlign="left">
           Welcome to My Hours
         </Heading>
 
@@ -34,7 +34,7 @@ const Signup = () => {
           <FormLabel mt="25" fontSize="sm">
             FULL NAME
           </FormLabel>
-          <FormHelperText>
+          <FormHelperText textAlign="left">
             So we know what to call you in the app
           </FormHelperText>
           <Input
@@ -48,7 +48,7 @@ const Signup = () => {
           <FormLabel mt="25" fontSize="sm">
             EMAIL
           </FormLabel>
-          <FormHelperText>You will use this email to login</FormHelperText>
+          <FormHelperText textAlign="left">You will use this email to login</FormHelperText>
           <Input
             id="b"
             type="email"

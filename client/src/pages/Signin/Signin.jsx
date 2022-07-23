@@ -1,31 +1,70 @@
-// import { Flex, Heading, Input } from '@chakra-ui/react';
-import { Button, FormDiv, ImageDiv, MainDiv } from '../../components/Singin/Signin.styled';
-import "./Sign.css"
-export const Signin = ()=>{
-
+import React from "react";
+import {
+    Flex,
+    Box,
+    FormControl,
+    FormLabel,
+    Input,
+    Checkbox,
+    Stack,
+    Link,
+    Button,
+    Heading,
+    Text,
+    useColorModeValue,
+  } from '@chakra-ui/react';
+  
+const Signin = () => {
     return (
-     <div>
-        <MainDiv>
-            <ImageDiv>
-                <img style={{margin : "10px 75px "}} src="https://app.myhours.com/assets/myhours_app_logo_icon.svg" alt="Myhours" />
-            </ImageDiv>
-            <FormDiv>
-                <form id='form'>
-               <h2 id='signin'>Sign in</h2>
-               <p id='emailPara'>EMAIL</p>
-               <input id='email' type="email" placeholder='Email' required="true"/>
-               <p id='emailPara' style={{marginTop:"20px"}}>PASSWORD</p>
-               <input id='email'  type="email" placeholder='Password' required="true"/>
-               <input id='submit' type="submit" value="Sign in"/>
-               <a id='pass' href="#">Reset Password</a>
-                </form>
-                <hr id='line' />
-                <a id='newuser' href="#">New to My Hours? Sign up</a>
-           </FormDiv>
-        </MainDiv>
-           
+      <Flex
+        minH={'100vh'}
+        align={'center'}
+        justify={'center'}
         
-    </div>
-    )
-    
-}
+        border="1px solid">
+        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+          <Stack align={'center'}>
+            <Heading fontSize={'4xl'}>Sign in to your account</Heading>
+            <Text fontSize={'lg'} color={'gray.600'}>
+              to enjoy all of our cool <Link color={'blue.400'}>features</Link> ✌️
+            </Text>
+          </Stack>
+          <Box
+            rounded={'lg'}
+            bg={useColorModeValue('white', 'gray.700')}
+            boxShadow={'lg'}
+            p={8}>
+            <Stack spacing={4}>
+              <FormControl id="email">
+                <FormLabel>Email address</FormLabel>
+                <Input type="email" />
+              </FormControl>
+              <FormControl id="password">
+                <FormLabel>Password</FormLabel>
+                <Input type="password" />
+              </FormControl>
+              <Stack spacing={10}>
+                <Stack
+                  direction={{ base: 'column', sm: 'row' }}
+                  align={'start'}
+                  justify={'space-between'}>
+                  <Checkbox>Remember me</Checkbox>
+                  <Link color={'blue.400'}>Forgot password?</Link>
+                </Stack>
+                <Button
+                  bg={'blue.400'}
+                  color={'white'}
+                  _hover={{
+                    bg: 'blue.500',
+                  }}>
+                  Sign in
+                </Button>
+              </Stack>
+            </Stack>
+          </Box>
+        </Stack>
+      </Flex>
+    );
+  }
+
+  export default Signin;

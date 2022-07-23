@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Heading,
@@ -16,20 +16,26 @@ import {
   InputGroup,
   InputLeftAddon,
   Checkbox,
-  Button,
+  Button
 } from "@chakra-ui/react";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import styles from "./Team.module.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import {useParams} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
-const AddTeam = () => {
+const EditTeam = () => {
+
   const [form, setForm] = useState({});
+  console.log('form:', form)
+  const params = useParams();
+  const id = params.id;
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value, checked, type } = e.target;
-    if (type === checked) {
+    if ( type === checked )
+    {
       setForm({
         ...form,
         [name]: checked,
@@ -42,16 +48,25 @@ const AddTeam = () => {
     }
   };
 
+  useEffect(() => {
+    getData();
+  },[]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    postData();
+    handlePatch();
   };
 
-  const postData = async () => {
+  const getData = async () => {
     console.log(form);
-    await axios.post("http://localhost:8080/teams", form);
+    const res = await axios(`http://localhost:8080/teams/${id}`);
+    setForm(res.data);
+}
+
+const handlePatch = async () => {
+    await axios.put(`http://localhost:8080/teams/${id}`, form);
     navigate("/");
-  };
+}
 
   return (
     <Box w="85%" mb="50">
@@ -64,19 +79,15 @@ const AddTeam = () => {
           <FormLabel color="gray" mt="19" fontSize="13">
             NAME
           </FormLabel>
-          <Input type="text" name="name" onChange={handleChange} />
+          <Input type="text" name="name" onChange={handleChange} value={form.name}/>
           <FormLabel color="gray" mt="19" fontSize="13">
             Email
           </FormLabel>
-          <Input type="email" name="email" onChange={handleChange} />
+          <Input type="email" name="email" onChange={handleChange} value={form.email}/>
           <FormLabel color="gray" mt="19" fontSize="13">
             NOTES (PRIVATE TO ADMINS)
           </FormLabel>
-          <Textarea
-            placeholder="Add notes..."
-            name="note"
-            onChange={handleChange}
-          />
+          <Textarea placeholder="Add notes..." name="note" onChange={handleChange} value={form.note}/>
 
           <hr className={styles.horizonatalLine} />
 
@@ -92,13 +103,7 @@ const AddTeam = () => {
                 border="1px solid lightGray"
                 rounded="5"
               >
-                <Radio
-                  value="Admin"
-                  pl="10"
-                  size="md"
-                  name="role"
-                  onChange={handleChange}
-                >
+                <Radio value="Admin" pl="10" size="md" name="role" onChange={handleChange}>
                   <Flex direction="column">
                     <Box pl="10" fontWeight="500" color="gray.600">
                       Admin
@@ -117,13 +122,7 @@ const AddTeam = () => {
                 border="1px solid lightGray"
                 rounded="5"
               >
-                <Radio
-                  value="Manager"
-                  pl="10"
-                  size="md"
-                  name="role"
-                  onChange={handleChange}
-                >
+                <Radio value="Manager" pl="10" size="md" name="role" onChange={handleChange}>
                   <Flex direction="column">
                     <Box pl="10" fontWeight="500" color="gray.600">
                       Manager
@@ -143,13 +142,7 @@ const AddTeam = () => {
                 border="1px solid lightGray"
                 rounded="5"
               >
-                <Radio
-                  value="Normal"
-                  pl="10"
-                  size="md"
-                  name="role"
-                  onChange={handleChange}
-                >
+                <Radio value="Normal" pl="10" size="md" name="role" onChange={handleChange}>
                   <Flex direction="column">
                     <Box pl="10" fontWeight="500" color="gray.600">
                       Normal
@@ -180,17 +173,11 @@ const AddTeam = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                Enter default hourly rate for the team member to calculate Labor
+                Enter default hourly rate for the team form to calculate Labor
                 cost. This rate can be further specified on individual projects.
                 <InputGroup mt="5">
                   <InputLeftAddon h="8" children="INR" />
-                  <Input
-                    size="sm"
-                    type="tel"
-                    placeholder="0"
-                    name="laborRate"
-                    onChange={handleChange}
-                  />
+                  <Input size="sm" type="tel" placeholder="0" name="laborRate" onChange={handleChange} value={form.laborRate}/>
                 </InputGroup>
               </AccordionPanel>
             </AccordionItem>
@@ -211,31 +198,19 @@ const AddTeam = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                Enter default billable rate for the team member to calculate
-                Billable cost. This rate can be further specified on individual
-                projects.
+              Enter default billable rate for the team form to calculate Billable cost. This rate can be further specified on individual projects.
                 <InputGroup mt="5">
                   <InputLeftAddon h="8" children="INR" />
-                  <Input
-                    size="sm"
-                    type="tel"
-                    placeholder="0"
-                    name="billableRate"
-                    onChange={handleChange}
-                  />
+                  <Input size="sm" type="tel" placeholder="0" name="billableRate" onChange={handleChange} value={form.billableRate}/>
                 </InputGroup>
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
 
-          <Checkbox mt="25">
-            Automatically add this team member to all new projects
-          </Checkbox>
+          <Checkbox mt="25">Automatically add this team member to all new projects</Checkbox>
 
           <Box mt="25">
-            <Button colorScheme="blue" onClick={handleSubmit}>
-              Add Member
-            </Button>
+          <Button colorScheme="blue" onClick={handleSubmit}>Edit member</Button>
           </Box>
         </FormControl>
       </Box>
@@ -243,4 +218,4 @@ const AddTeam = () => {
   );
 };
 
-export default AddTeam;
+export default EditTeam;
