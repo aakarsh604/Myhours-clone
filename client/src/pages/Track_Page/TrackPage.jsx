@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Flex, Text, Input, Box } from '@chakra-ui/react';
-import {
-  CalendarIcon,
-  ArrowForwardIcon,
-  ArrowBackIcon,
-} from '@chakra-ui/icons';
+import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons';
 import { Stopwatch } from './Stopwatch';
-import styled from 'styled-components';
 import { Form } from './Form';
 import {
   AiOutlineHome,
@@ -18,44 +13,7 @@ import {
   AiFillEdit,
   AiFillFolderOpen,
 } from 'react-icons/ai';
-import { useStopwatch } from './useStopwatch';
 
-const Container = styled.div`
-  width: 66%;
-  padding: 20px 100px;
-  text-align: left;
-`;
-const Navbar = styled.div`
-  color: #375d75;
-  display: flex;
-  justify-content: space-between;
-`;
-const CurrentDay = styled.p`
-  font-size: 1.6em;
-  color: #375d75;
-`;
-const InputDate = styled.input`
-  border: none;
-  font-size: 1.3em;
-`;
-const Navbar2 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px 0 10px;
-`;
-const AddBtn = styled.button`
-  border: none;
-  font-size: 15px;
-  color: #3b8fc2;
-  cursor: pointer;
-`;
-const Nav2Btn = styled.button`
-  border: none;
-  font-size: 15px;
-  color: #375d75;
-  background: white;
-  cursor: pointer;
-`;
 export const TrackPage = () => {
   const [status, setStatus] = useState(false);
   const Data = JSON.parse(localStorage.getItem('clientData')) || [];
@@ -119,7 +77,7 @@ export const TrackPage = () => {
                   {!e.client ? (
                     <AiFillEdit style={{ marginTop: '4px' }} />
                   ) : (
-                    <AiFillFolderOpen style={{ marginTop: '4px' }}/>
+                    <AiFillFolderOpen style={{ marginTop: '4px' }} />
                   )}
                   <Text style={!e.client ? { color: 'grey' } : {}}>
                     {!e.client ? 'Add a Project, task or tag' : e.client}
