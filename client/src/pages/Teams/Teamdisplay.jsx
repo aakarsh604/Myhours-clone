@@ -15,8 +15,12 @@ import {
   Tbody,
 } from "@chakra-ui/react";
 import { AddIcon, ArrowUpIcon, ExternalLinkIcon, EditIcon } from "@chakra-ui/icons";
+import { useNavigate } from "react-router";
+
+
 
 const Teamdisplay = () => {
+  const Nevigete = useNavigate()
   return (
     <Box width="85%" p="5">
       <Flex>
