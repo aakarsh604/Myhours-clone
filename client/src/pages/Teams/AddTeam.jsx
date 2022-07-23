@@ -7,6 +7,9 @@ import {
 
 const AddTeam = () => {
   return (
+
+    <>
+    
     <Box w="85%" border="1px solid">
       <Box w="48%" m="auto">
         <Heading fontWeight="500" mt="30">
@@ -27,6 +30,7 @@ const AddTeam = () => {
         </FormControl>
       </Box>
     </Box>
+    </>
   );
 };
 

@@ -16,19 +16,27 @@ import {
 } from "@chakra-ui/react";
 import { AddIcon, ArrowUpIcon, ExternalLinkIcon, EditIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router";
+import Sidebar from "../sidebar/Sidebar";
 
 
 
 const Teamdisplay = () => {
   const Nevigete = useNavigate()
   return (
-    <Box width="85%" p="5">
+    <>
+    <div  style={{display:"flex",justifyContent:"space-between"}}>
+ <div>
+  {<Sidebar/>}
+ </div>
+ <div  style={{marginTop:"0px"}}>
+    
+ <Box width="100%" p="" m="15px  200px 0px  0px">
       <Flex>
         <Heading size="xl" fontWeight="500">
           Team members
         </Heading>
         <Spacer />
-        <Button colorScheme="blue" leftIcon={<AddIcon />}>
+        <Button colorScheme="blue"  onClick={()=>{Nevigete("/team/add")}} leftIcon={<AddIcon />}>
           New Team Member
         </Button>
       </Flex>
@@ -65,6 +73,10 @@ const Teamdisplay = () => {
         </Table>
       </TableContainer>
     </Box>
+  </div>
+    </div>
+
+    </>
   );
 };
 

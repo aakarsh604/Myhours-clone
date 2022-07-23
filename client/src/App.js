@@ -12,7 +12,7 @@ import AddTeam from './pages/Teams/AddTeam.jsx'
 function App() {
   return (
     <div className='App'>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/signin' element={<Signin />} />
@@ -20,11 +20,11 @@ function App() {
         <Route path='/usecase' element={<Usecase />} />
         <Route path='/pricing' element={<PricingPage />} /> 
         <Route path="/team"  element = {<Teamdisplay/>} />
-        <Route path ="/team/:id" element ={<AddTeam/>} />
+        <Route path ="/team/add" element ={<AddTeam/>} />
 
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
