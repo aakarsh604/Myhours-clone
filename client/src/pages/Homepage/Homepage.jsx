@@ -13,9 +13,11 @@ import {
   Highlight,
 } from '@chakra-ui/react';
 import React from 'react';
+import {useNavigate} from 'react-router-dom'
 import { ArrowForwardIcon, CheckIcon } from '@chakra-ui/icons';
 
 function Homepage() {
+  const navigate = useNavigate();
   return (
 
 
@@ -45,7 +47,8 @@ function Homepage() {
           bg={'blue.400'}
           color={'white'}
           align='center'
-          mb={'3px'}>
+          mb={'3px'}
+          onClick={()=>navigate('/signup')}>
           Get Started - it's Free
         </Button>
       </Box>
@@ -341,7 +344,8 @@ function Homepage() {
               align='center'
               pt='3rem'
               rightIcon={<ArrowForwardIcon />}
-              fontSize='2xl'>
+              fontSize='2xl'
+              onClick={()=>navigate('/usecase')}>
               Find More Use Case's
             </Button>
           </Box>
@@ -619,7 +623,8 @@ function Homepage() {
             bg={'blue.400'}
             color={'white'}
             align='center'
-            mb={'1rem'}>
+            mb={'1rem'}
+            onClick={()=>navigate('/signup')}>
             Get Started - it's Free
           </Button>
           <Text align='left'>
