@@ -13,7 +13,7 @@ function Usecase() {
       border="black"
       justifyContent="center"
     >
-      <Heading letterSpacing="3px" fontWeight="300" size="3xl" mt="100px">
+      <Heading letterSpacing="3px" fontWeight="300" size="3xl" pt="200px">
         Use cases
       </Heading>
       <Heading
