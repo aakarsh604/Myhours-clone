@@ -56,7 +56,6 @@ const panel = {
 
 export const PricingPage = () => {
   return (
-    <div>
       <div
         style={{
           fontFamily: 'Avernirnextitpro, sans-serif',
@@ -305,6 +304,5 @@ export const PricingPage = () => {
           </HStack>
         </Box>
       </div>
-    </div>
   );
 };
