@@ -1,4 +1,5 @@
 .terms {
     color : blue;
     text-decoration: underline;
+    cursor : pointer;
 }
