@@ -13,10 +13,12 @@ import {
   Th,
   Td,
   Tbody,
+  HStack,
 } from "@chakra-ui/react";
 import { AddIcon, ArrowUpIcon, ExternalLinkIcon, EditIcon } from "@chakra-ui/icons";
 import {Link} from "react-router-dom";
 import axios from "axios";
+import Sidebar from "../sidebar/Sidebar";
 
 const Teamdisplay = () => {
   const [data, setData] = useState([]);
@@ -31,6 +33,11 @@ const getData = async () => {
 }
 
   return (
+    <Flex w='100%'>
+      <Box>
+        <Sidebar />
+      </Box>
+      <Spacer/>
     <Box width="85%" p="5">
       <Flex>
         <Heading size="xl" fontWeight="500">
@@ -41,9 +48,9 @@ const getData = async () => {
           <Link to="/add">New Team Member</Link>
         </Button>
       </Flex>
-      <Box mt="4">
-        <Input w="270px" placeholder="Search by Team member name" />
-      </Box>
+      <HStack   mt="4">
+        <Input  w="270px" placeholder="Search by Team member name" />
+      </HStack>
 
       <TableContainer mt="5">
         <Table size="md">
@@ -76,6 +83,7 @@ const getData = async () => {
         </Table>
       </TableContainer>
     </Box>
+    </Flex>
   );
 };
 
