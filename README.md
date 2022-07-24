@@ -8,7 +8,7 @@ This collaborative project is a clone of the [MyHours](https://myhours.com) webs
 
 [My Hours clone](https://scintillating-crostata-f5d75b.netlify.app/)
 
-## Presentation Videp
+## Presentation Video
 
 [Presentation](https://drive.google.com/file/d/1gWjGg-inI2Jdoo8VRD6R1hiliGXf3HPB/view)
 
