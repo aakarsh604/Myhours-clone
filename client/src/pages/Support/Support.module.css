@@ -2,12 +2,16 @@
 .supportmaindiv {
    width: 1200px;
    margin: auto;
-
+   padding-top: 150px;
    justify-content: center;
    text-align: start;
    /* border: 1px solid red; */
    height: auto;
    margin-top: 50px;
+}
+
+.container{
+    margin-top : -50px;
 }
 .support_here {
     /* margin-top: 30px; */

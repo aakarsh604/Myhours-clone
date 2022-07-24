@@ -217,10 +217,11 @@ const NAV_ITEMS = [
   },
   {
     label: "Support",
-    href: "#",
+    href: "/support",
   },
   {
     label: "Sign In",
     href: "/signup",
   },
+  
 ];

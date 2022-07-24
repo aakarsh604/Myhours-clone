@@ -152,6 +152,11 @@ import axios from "axios";
                     <BsBell style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
                     <p>What's new</p>
                 </div>
+                <Link to="/" >
+                <div className={styled.icon2}>
+                    <BsPerson style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
+                    <p>Sign Out</p>
+                </div></Link>
                 <div className={styled.icon2}>
                     <BsPerson style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
                     <p>{name}</p>

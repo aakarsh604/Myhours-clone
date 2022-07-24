@@ -11,6 +11,7 @@ import ClientDetails from './pages/Client/ClientDetails';
 import NewClient from './pages/Client/NewClient';
 import EditClient from './pages/Client/EditClient';
 import { TrackPage } from './pages/Track_Page/TrackPage';
+import Support from "./pages/Support/Support.jsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/signin' element={<Signin />} />
         <Route path='/usecase' element={<Usecase />} />
         <Route path='/pricing' element={<PricingPage />} />
+        <Route path='/support' element={<Support />} />
         <Route path='/teams' element={<Teamdisplay />} />
         <Route path='/add' element={<AddTeam />} />
         <Route path='/edit/:id' element={<EditTeam />} />
