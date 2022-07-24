@@ -82,7 +82,7 @@ This collaborative project is a clone of the [MyHours](https://myhours.com) webs
   ![Team Members](./Website%20sneak%20peeks/TeamMembers.png?raw=true)
 
   - **Team Members Form**
-  ![Team Members Form](./Website%20sneak%20peeks/TeamMembersForm.png?raw=true)
+  ![Team Member Form](./Website%20sneak%20peeks/TeamMemberForm.png?raw=true)
 
 - **Footer**
 
