@@ -1,6 +1,7 @@
 const {Router} = require("express")
 
 const {TeamMeamber,connection} = require("./../database/teamMember.js")
+const UserModel = require("../../Models/User.auth")
 
 const Team =  Router()
 
@@ -16,6 +17,20 @@ Team.post("/teamMemberpost" , async(req,res)=>{
     try {
   
         const data =  await TeamMeamber.find({})
+        console.log(data)
+         return res.status(200).json(data)
+       }catch(error){
+         res.status(404).json(error) 
+       
+     }
+
+ })
+
+ Team.get("/user/:id",async(req,res)=>{
+    res.setHeader("content-type","application/json")
+    try {
+  
+        const data =  await UserModel.findOne({_id:req.params.id})
         console.log(data)
          return res.status(200).json(data)
        }catch(error){

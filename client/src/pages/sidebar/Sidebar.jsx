@@ -15,8 +15,23 @@ import {
 import styled from './sidebar.module.css'
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import axios from "axios";
    const  Sidebar  = ()=>{
-  const navigate = useNavigate()
+    const[name,setName]=useState("")
+ useEffect(()=>{
+  getData()
+ },[])
+
+
+   const id = JSON.parse(localStorage.getItem('userid'));
+   const getData = async () => {
+    const r = await axios.get(`http://localhost:4040/teamMember/user/${id}`);
+     console.log(r.data)
+     setName(r.data.name)
+}
+
+
 
 
  
@@ -145,7 +160,7 @@ import { Link } from 'react-router-dom';
                 </div>
                 <div className={styled.icon2}>
                     <BsPerson style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
-                    <p>sagar</p>
+                    <p>{name}</p>
                 </div>
    
             </div>

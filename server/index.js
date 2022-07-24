@@ -7,16 +7,27 @@ const app = express()
 const clientRouter = require("./project/route/clientsRoute")
 const authRouter = require("./Routes/auth.routes");
 const PORT = process.env.PORT || 4040
+const  UserModel  = require("./Models/User.auth")
 const {connection} = require("./project/database/teamMember");
 const { application } = require("express");
+const user = require("./Routes/user.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
  app.use(cors())
 //   app.use("/",clientRouter)
+  //  app.use("/users",user)
     app.use("/",authRouter)
   app.use("/client",clientRouter)
  app.use("/teamMember",Team)
+
+  
+     
+  
+      
+
+  
+
 //  app.use("/teamMemberdata",Team)
 
  app.listen(4040, async () => {
