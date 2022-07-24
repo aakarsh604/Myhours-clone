@@ -31,6 +31,7 @@ export const Form = ({ setOpen, status, setStatus }) => {
       <Flex w={'90%'} m={'auto'} mb={'5'}>
         <Box w={'65%'}>
           <Label>CLIENT & PROJECT</Label>
+          <br />
           <Input
             w={'85%'}
             m={'3px 0'}
