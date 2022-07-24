@@ -8,9 +8,9 @@ const TeamMeamberSchem = new Schema({
   email :String ,
   note: String ,
   role : String , 
-  laborrate:String ,
-  bilablerate: String ,
-  approvalSettings:String,
+  laborRate:Number ,
+  billableRate:Number ,
+
 
 })
 

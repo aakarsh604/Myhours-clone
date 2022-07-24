@@ -45,12 +45,13 @@ const AddTeam = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    postData();
+    console.log(form)
+    postData(form);
   };
 
   const postData = async () => {
     console.log(form);
-    await axios.post("http://localhost:8080/teams", form);
+    await axios.post("http://localhost:4040/teamMember/teamMemberpost", form);
     navigate("/teams");
   };
 

@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Box, Image, Heading, Input, Text, Button } from "@chakra-ui/react";
 import { FormControl, FormLabel, FormHelperText } from "@chakra-ui/react";
 import styles from "./Signup.module.css";
+import {useNavigate} from "react-router-dom";
 
 const Signup = () => {
   const [form, setForm] = useState({});
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,6 +20,17 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
+    let payload = JSON.stringify(form)
+    fetch("http://localhost:4040/signup", {
+        headers : {
+            "Content-Type" : "application/json"
+        },
+        method : 'POST',
+        body : payload
+    })
+    .then((res) => res.json())
+    .then((res) => navigate("/signin"))
+    .catch((err) => console.log(err))
   };
 
   return (
