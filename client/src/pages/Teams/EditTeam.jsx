@@ -59,7 +59,6 @@ const EditTeam = () => {
   };
 
   const getData = async () => {
-    console.log(form);
     const res = await axios(`http://localhost:4040/teamMember/${id}`);
     setForm(res.data);
 }

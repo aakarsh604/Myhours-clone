@@ -12,6 +12,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import Header from "../../components/Hedear/Header";
+import Footer from "../../components/Footer/Footer";
 
 const Signup = () => {
   const [form, setForm] = useState({});
@@ -52,10 +54,9 @@ const Signup = () => {
     .catch((err) => console.log(err))
 }
 
-  
-
-
   return (
+    <Box>
+      <Header />
     <Box pt="150" mb="50">
       <Box boxShadow="2xl" h="450" w="32%" m="auto" pt="70" p="35">
         <Image
@@ -113,6 +114,8 @@ const Signup = () => {
         </FormControl>
       </Box>
     </Box>
+        <Footer/>
+        </Box>
   );
 };
 

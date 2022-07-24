@@ -45,12 +45,10 @@ const AddTeam = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form)
     postData(form);
   };
 
   const postData = async () => {
-    console.log(form);
     await axios.post("http://localhost:4040/teamMember/teamMemberpost", form);
     navigate("/teams");
   };
@@ -108,7 +106,7 @@ const AddTeam = () => {
                   onChange={handleChange}
                 >
                   <Flex direction="column">
-                    <Box pl="10" fontWeight="500" color="gray.600">
+                    <Box pl="10" fontWeight="500" color="gray.600" textAlign="left">
                       Admin
                     </Box>
                     <Box pl="10" color="gray">
@@ -133,7 +131,7 @@ const AddTeam = () => {
                   onChange={handleChange}
                 >
                   <Flex direction="column">
-                    <Box pl="10" fontWeight="500" color="gray.600">
+                    <Box pl="10" fontWeight="500" color="gray.600" textAlign="left">
                       Manager
                     </Box>
                     <Box pl="10" color="gray">
@@ -159,7 +157,7 @@ const AddTeam = () => {
                   onChange={handleChange}
                 >
                   <Flex direction="column">
-                    <Box pl="10" fontWeight="500" color="gray.600">
+                    <Box pl="10" fontWeight="500" color="gray.600" textAlign="left">
                       Normal
                     </Box>
                     <Box pl="10" color="gray">

@@ -3,7 +3,7 @@ const fs = require("fs");
 const mongodb = require("mongodb");
 const cors = require("cors")
 const  Team = require("./project/route/teamRoute.js")
-const app = express()
+const app = express();
 const clientRouter = require("./project/route/clientsRoute")
 const authRouter = require("./Routes/auth.routes");
 require("dotenv").config()

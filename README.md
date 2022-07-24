@@ -19,7 +19,7 @@ This collaborative project is a clone of the [MyHours](https://myhours.com) webs
 
 ## Tech Stack
 
-- HTML | CSS | JavaScript | React | Redux | MongoDB | NodeJS | Express |
+- HTML | CSS | JavaScript | React | MongoDB | NodeJS | Express |
 
 ### Libraries Used
 
