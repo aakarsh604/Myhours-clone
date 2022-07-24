@@ -37,30 +37,30 @@ This collaborative project is a clone of the [MyHours](https://myhours.com) webs
 
 ### Sneak Peeks on Large Devices
 
-- ** Landing Page **
+- **Landing Page**
 
   ![Homepage](./Website%20sneak%20peeks/Homepage.png?raw=true)
 
-- ** Usecase Page **
+- **Usecase Page**
 
   ![Usecase](./Website%20sneak%20peeks/Usecase.png?raw=true)
 
-- ** Pricing Page **
+- **Pricing Page**
 
   ![Pricing](./Website%20sneak%20peeks/Pricing.png?raw=true)
 
-- ** Reviews **
+- **Reviews**
 
   ![Reviews](./Website%20sneak%20peeks/Reviews.png?raw=true)
 
-- ** Signup **
+- **Signup**
 
   ![Signup](./Website%20sneak%20peeks/Signup.png?raw=true)
 
-- ** Track Page **
+- **Track Page**
 
   ![Track](./Website%20sneak%20peeks/Track.png?raw=true)
 
-- ** Frequently Asked Question **
+- **Frequently Asked Question**
 
   ![FAQ](./Website%20sneak%20peeks/FAQ.png?raw=true)
