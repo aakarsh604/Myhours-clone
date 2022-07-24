@@ -1,7 +1,5 @@
 import { Route, Routes } from 'react-router';
 import Homepage from './pages/Homepage/Homepage';
-import Footer from './components/Footer/Footer';
-import Header from './components/Hedear/Header';
 import Usecase from './pages/UsecasePage/Usecase';
 import { PricingPage } from './pages/Pricing_Page/PricingPage';
 import Signup from './pages/Signup/Signup';
@@ -32,6 +30,7 @@ function App() {
         <Route path='/addClient' element={<NewClient />} />
         <Route path='/editClient/:id' element={<EditClient />} />
         <Route path='/track' element={<TrackPage />} />
+     
       </Routes>
     </div>
   );
