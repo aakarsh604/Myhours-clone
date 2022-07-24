@@ -8,7 +8,7 @@ const clientSchema = mongoose.Schema({
     phone:String,
     address:String,
     taxname:String,
-    taxparcentage:String,
+    taxparcentage:Number,
     taxnumber:String,
 })
 

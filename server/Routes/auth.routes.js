@@ -22,6 +22,7 @@ authRouter.post("/signin", async(req,res)=>{
             ...checkuser[0],
             token : 12345
         }
+        console.log(checkuser)
         res.send(payload);
     }
     else{

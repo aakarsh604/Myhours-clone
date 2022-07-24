@@ -47,13 +47,16 @@ const EditClient = () => {
 
   const getData = async () => {
     console.log(form);
-    const res = await axios(`http://localhost:8080/client/${id}`);
+    const res = await axios(`http://localhost:4040/client/${id}`);
     setForm(res.data);
+    console.log(res.data)
 }
 
 const handlePatch = async () => {
-    await axios.put(`http://localhost:8080/client/${id}`, form);
-     navigate("/clients");
+  console.log(form)
+   await axios.put(`http://localhost:4040/client/${id}`, form);
+     
+     navigate("/Clients");
 }
 
   return (
@@ -63,18 +66,18 @@ const handlePatch = async () => {
     </Box>
     
     <Box w='40%' ml={'20rem'}  pt='3rem' pb='2rem'>
-    <Heading>New client</Heading>
+    <Heading>Edit client</Heading>
     <FormControl  onSubmit={handleSubmit} style={{width:'80%'}}>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.name}>NAME</FormLabel>
-      <Input onChange={handleChange} w='100%' variant='outline' name='name' ></Input>
-      <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.contactperson}>CONTACT PERSON</FormLabel>
-      <Input onChange={handleChange} w='100%' variant='outline' name='contactPerson'  ></Input>
+      <Input onChange={handleChange} w='100%' variant='outline' name='name'  value={form.name}></Input>
+      <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.contactperson}  >CONTACT PERSON</FormLabel>
+      <Input type="text" onChange={handleChange} w='100%' variant='outline' name='contactperson' value={form.contactperson} ></Input>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.email}>EMAIL</FormLabel>
-      <Input type='email' onChange={handleChange} w='100%' variant='outline' name='email' ></Input>
+      <Input type='email' onChange={handleChange} w='100%' variant='outline' name='email' value={form.email}></Input>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.phone}>PHONE</FormLabel>
-      <Input onChange={handleChange} w='100%' variant='outline' name='phone' ></Input>
-      <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.address}>ADDRESS</FormLabel>
-      <Textarea onChange={handleChange} size='lg' h='4rem' w='100%' name='address'></Textarea>
+      <Input onChange={handleChange} w='100%' variant='outline' name='phone' value={form.phone} ></Input>
+      <FormLabel fontSize='12px'mt='1rem' color='gray.600' >ADDRESS</FormLabel>
+      <Textarea onChange={handleChange} size='lg' h='4rem' w='100%' name='address' value={form.address}></Textarea>
       <HStack spacing={1} justifyContent='space-betwee6'>
       <Box w='46%'>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX NAME</FormLabel>
@@ -82,7 +85,7 @@ const handlePatch = async () => {
       </Box>
      <Box w='46%'>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX PERCENTAGE</FormLabel>
-      <Input type='number' onChange={handleChange}  value={form.taxpercentage} w='100%' variant='outline' name='taxPercentage' ></Input>
+      <Input type='number' onChange={handleChange}  value={form.taxparcentage} w='100%' variant='outline' name='taxparcentage' ></Input>
       </Box>
     </HStack>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX NUMBER</FormLabel>
