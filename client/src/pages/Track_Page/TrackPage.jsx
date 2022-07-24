@@ -17,7 +17,7 @@ import {
 export const TrackPage = () => {
   const [status, setStatus] = useState(false);
   const Data = JSON.parse(localStorage.getItem('clientData')) || [];
-  console.log(Data);
+  // console.log(Data);
   const [open, setOpen] = useState(false);
   const now = new Date();
   const nows = now.toString().split(' ');
@@ -99,6 +99,19 @@ export const TrackPage = () => {
                     fontSize={'12px'}
                     p={'2px 5px'}>
                     {e.tags ? e.tags : ''}
+                  </Text>
+                  <Text
+                    color={'red'}
+                    fontSize='12'
+                    cursor={'pointer'}
+                    onClick={() => {
+                      Data.splice(i, 1);
+                      localStorage.setItem('clientData', JSON.stringify(Data));
+                      {
+                        status ? setStatus(false) : setStatus(true);
+                      }
+                    }}>
+                    remove
                   </Text>
                 </Flex>
                 <Text
