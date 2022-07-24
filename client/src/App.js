@@ -1,7 +1,5 @@
 import { Route, Routes } from 'react-router';
 import Homepage from './pages/Homepage/Homepage';
-import Footer from './components/Footer/Footer';
-import Header from './components/Hedear/Header';
 import Usecase from './pages/UsecasePage/Usecase';
 import { PricingPage } from './pages/Pricing_Page/PricingPage';
 import Signup from './pages/Signup/Signup';
@@ -13,7 +11,7 @@ import ClientDetails from './pages/Client/ClientDetails';
 import NewClient from './pages/Client/NewClient';
 import EditClient from './pages/Client/EditClient';
 import { TrackPage } from './pages/Track_Page/TrackPage';
-import Support from './pages/Support/Support';
+import Support from "./pages/Support/Support.jsx";
 
 function App() {
   return (
@@ -24,6 +22,7 @@ function App() {
         <Route path='/signin' element={<Signin />} />
         <Route path='/usecase' element={<Usecase />} />
         <Route path='/pricing' element={<PricingPage />} />
+        <Route path='/support' element={<Support />} />
         <Route path='/teams' element={<Teamdisplay />} />
         <Route path='/add' element={<AddTeam />} />
         <Route path='/edit/:id' element={<EditTeam />} />
@@ -31,7 +30,6 @@ function App() {
         <Route path='/addClient' element={<NewClient />} />
         <Route path='/editClient/:id' element={<EditClient />} />
         <Route path='/track' element={<TrackPage />} />
-        <Route path = "/support" element= {<Support/>} />
      
       </Routes>
     </div>
