@@ -30,12 +30,6 @@ import axios from "axios";
      console.log(r.data)
      setName(r.data.name)
 }
-
-
-
-
- 
-     
   
     return (
         <>
@@ -160,7 +154,7 @@ import axios from "axios";
                 </div>
                 <div className={styled.icon2}>
                     <BsPerson style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
-                    <p>{name}</p>
+                    <p></p>
                 </div>
    
             </div>
