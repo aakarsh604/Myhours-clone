@@ -23,7 +23,7 @@ const Signup = () => {
     e.preventDefault();
     console.log(form);
     let payload = JSON.stringify(form)
-    fetch("http://localhost:4040/signup", {
+    fetch("https://masaihours.herokuapp.com/signup", {
         headers : {
             "Content-Type" : "application/json"
         },

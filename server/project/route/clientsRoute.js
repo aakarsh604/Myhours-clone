@@ -2,9 +2,6 @@ const {Router} = require("express")
 const clientModel = require("../model/client.js")
 const clientRouter = Router();
 
-
-
-
 clientRouter.post("/clientpost",async(req,res)=>{
 
     const client = new clientModel({...req.body})

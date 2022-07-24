@@ -49,7 +49,7 @@ const AddTeam = () => {
   };
 
   const postData = async () => {
-    await axios.post("http://localhost:4040/teamMember/teamMemberpost", form);
+    await axios.post("https://masaihours.herokuapp.com/teamMember/teamMemberpost", form);
     navigate("/teams");
   };
 

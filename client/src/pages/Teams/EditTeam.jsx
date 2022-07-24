@@ -59,12 +59,12 @@ const EditTeam = () => {
   };
 
   const getData = async () => {
-    const res = await axios(`http://localhost:4040/teamMember/${id}`);
+    const res = await axios(`https://masaihours.herokuapp.com/teamMember/${id}`);
     setForm(res.data);
 }
 
 const handlePatch = async () => {
-    await axios.put(`http://localhost:4040/teamMember/${id}`, form);
+    await axios.put(`https://masaihours.herokuapp.com/teamMember/${id}`, form);
     navigate("/teams");
 }
 

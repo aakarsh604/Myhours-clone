@@ -17,18 +17,12 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   HStack,
 } from "@chakra-ui/react";
 import {
   AddIcon,
   ChevronDownIcon,
   ArrowUpIcon,
-  ExternalLinkIcon,
-  EditIcon,
   SettingsIcon,
 } from "@chakra-ui/icons";
 import axios from 'axios';
@@ -39,7 +33,7 @@ const ClientDetails = () => {
   const [clients, setClients] = useState([]);
   const clientsData = async () => {
     try {
-      let data = await fetch(`http://localhost:4040/client/clientdata`);
+      let data = await fetch(`https://masaihours.herokuapp.com/client/clientdata`);
       data = await data.json();
       setClients(data);
       console.log(clients);
@@ -49,7 +43,7 @@ const ClientDetails = () => {
   };
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:4040/client/${id}`, {
+      .delete(`https://masaihours.herokuapp.com/client/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },

@@ -14,7 +14,7 @@ const NewClient = () => {
     })
   }
   const postData =async(client)=>{
-    let data = await fetch(`http://localhost:4040/client/clientpost`,{
+    let data = await fetch(`https://masaihours.herokuapp.com/client/clientpost`,{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body:JSON.stringify(client)

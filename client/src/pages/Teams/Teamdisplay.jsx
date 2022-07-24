@@ -28,7 +28,7 @@ useEffect(() => {
 },[]);
 
 const getData = async () => {
-    const r = await axios("http://localhost:4040/teamMember/teamMemberdata");
+    const r = await axios("https://masaihours.herokuapp.com/teamMember/teamMemberdata");
     setData(r.data);
 }
 

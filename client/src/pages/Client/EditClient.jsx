@@ -4,9 +4,7 @@ import {
   Heading,
   Input,
   Textarea,
-  Spacer,
   HStack,
- 
   Button,
   Flex
 } from "@chakra-ui/react";
@@ -47,14 +45,14 @@ const EditClient = () => {
 
   const getData = async () => {
     console.log(form);
-    const res = await axios(`http://localhost:4040/client/${id}`);
+    const res = await axios(`https://masaihours.herokuapp.com/client/${id}`);
     setForm(res.data);
     console.log(res.data)
 }
 
 const handlePatch = async () => {
   console.log(form)
-   await axios.put(`http://localhost:4040/client/${id}`, form);
+   await axios.put(`https://masaihours.herokuapp.com/client/${id}`, form);
      
      navigate("/Clients");
 }
