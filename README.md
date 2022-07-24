@@ -45,14 +45,18 @@ This collaborative project is a clone of the [MyHours](https://myhours.com) webs
 
   ![Usecase](./Website%20sneak%20peeks/Usecase.png?raw=true)
 
-- **Pricing Page**
-
-  ![Pricing](./Website%20sneak%20peeks/Pricing.png?raw=true)
-
 - **Reviews**
 
   ![Reviews](./Website%20sneak%20peeks/Reviews.png?raw=true)
 
+- **Pricing Page**
+
+  ![Pricing](./Website%20sneak%20peeks/Pricing.png?raw=true)
+
+- **Frequently Asked Question**
+
+  ![FAQ](./Website%20sneak%20peeks/FAQ.png?raw=true)
+  
 -**Support**
 
   ![Support](./Website%20sneak%20peeks/Support.png?raw=true)
@@ -61,13 +65,24 @@ This collaborative project is a clone of the [MyHours](https://myhours.com) webs
 
   ![Signup](./Website%20sneak%20peeks/SignUp.png?raw=true)
 
+  - **SignIn**
+  ![SignIn](./Website%20sneak%20peeks/SignIn.png?raw=true)
+
 - **Track Page**
 
   ![Track](./Website%20sneak%20peeks/Track.png?raw=true)
 
-- **Frequently Asked Question**
+  - **Client**
+  ![Client](./Website%20sneak%20peeks/Client.png?raw=true)
 
-  ![FAQ](./Website%20sneak%20peeks/FAQ.png?raw=true)
+  - **Clint Form**
+  ![Client Form](./Website%20sneak%20peeks/ClientForm.png?raw=true)
+
+  - **Team Members**
+  ![Team Members](./Website%20sneak%20peeks/TeamMembers.png?raw=true)
+
+  - **Team Members Form**
+  ![Team Members Form](./Website%20sneak%20peeks/TeamMembersForm.png?raw=true)
 
 - **Footer**
 
