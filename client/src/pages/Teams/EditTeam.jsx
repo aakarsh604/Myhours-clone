@@ -60,12 +60,12 @@ const EditTeam = () => {
 
   const getData = async () => {
     console.log(form);
-    const res = await axios(`http://localhost:8080/teams/${id}`);
+    const res = await axios(`http://localhost:4040/teamMember/${id}`);
     setForm(res.data);
 }
 
 const handlePatch = async () => {
-    await axios.put(`http://localhost:8080/teams/${id}`, form);
+    await axios.put(`http://localhost:4040/teamMember/${id}`, form);
     navigate("/teams");
 }
 
@@ -78,7 +78,8 @@ const handlePatch = async () => {
     <Box w="85%" mb="50">
       <Box w="55%" m="auto">
         <Heading fontWeight="500" mt="30">
-          Add Team member
+        Edit Team member
+
         </Heading>
 
         <FormControl>

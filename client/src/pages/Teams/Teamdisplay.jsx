@@ -28,7 +28,7 @@ useEffect(() => {
 },[]);
 
 const getData = async () => {
-    const r = await axios("http://localhost:8080/teams");
+    const r = await axios("http://localhost:4040/teamMember/teamMemberdata");
     setData(r.data);
 }
 
@@ -76,7 +76,7 @@ const getData = async () => {
               <Td fontSize="14" isNumeric>{`₹ ${el.billableRate}.00`}</Td>
               <Td fontSize="14">{el.role}</Td>
               <Td fontSize="14">Active</Td>
-              <Td fontSize="14" cursor="pointer" _hover={{fontWeight : 500}}><Link to={`/edit/${el.id}`}>Edit </Link><EditIcon mb="1"/></Td>
+              <Td fontSize="14" cursor="pointer" _hover={{fontWeight : 500}}><Link to={`/edit/${el._id}`}>Edit </Link><EditIcon mb="1"/></Td>
             </Tr>
             ))}
           </Tbody>

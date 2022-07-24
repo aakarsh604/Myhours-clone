@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React , {useState} from 'react'
 import { AiOutlineBarChart } from "react-icons/ai";
 
 import {  BsGrid3X3GapFill,BsStopwatch,BsBriefcase,BsFolder,BsPeople ,BsQuestionCircle,BsPerson,BsPhone,BsBell} from "react-icons/bs";
@@ -13,8 +13,15 @@ import {
     background
   } from '@chakra-ui/react'
 import styled from './sidebar.module.css'
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
    const  Sidebar  = ()=>{
+  const navigate = useNavigate()
 
+
+ 
+     
+  
     return (
         <>
         <div className= {styled.sidebarmain}>
@@ -26,10 +33,12 @@ import styled from './sidebar.module.css'
                 <img  src='https://app.myhours.com/assets/myhours_app_logo_icon.svg'/>
                 </div>
 
-                <div className={styled.icon2}>
+                <Link to="/track" >   <div className={styled.icon2}>
                     <BsStopwatch style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
                     <p>Track</p>
+                   
                 </div>
+                </Link>
                 <div className={styled.icon2}>
                     <BsBriefcase style={{width:"15px" , height:"15px", marginTop:"5px", marginTop:"10px" ,marginLeft:"14px" }} />
                     <p>Project</p>
@@ -64,12 +73,17 @@ import styled from './sidebar.module.css'
   <AccordionItem  style={{border:"none"}}>
     <h2>
       <AccordionButton>
-        <Box flex='1' textAlign='left'  border="none">
+        <Box flex='1' textAlign='left'  border="none"  >
+        <Link to="/Clients" > 
         <div className={styled.icon3}>
                     < BsFolder style={{width:"18px" , height:"15px", marginTop:"10px" ,marginLeft:"16px"}} />
+                  
                     <p>Clients</p>
-                </div>
+                   
+                    </div>
+                    </Link>
         </Box>
+                
         <AccordionIcon />
       </AccordionButton>
     </h2>
@@ -89,11 +103,14 @@ import styled from './sidebar.module.css'
   <AccordionItem  style={{border:"none"}}>
     <h2>
       <AccordionButton>
+        
         <Box flex='1' textAlign='left'  border="none">
+        <Link to="/teams" > 
         <div className={styled.icon3}>
                     < BsPeople style={{width:"20px" , height:"18px", marginTop:"10px" ,marginLeft:"16px"}} />
                     <p>Team</p>
                 </div>
+                </Link>
         </Box>
         <AccordionIcon />
       </AccordionButton>
