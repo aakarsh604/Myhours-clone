@@ -3,6 +3,8 @@ import { Box, Image, Heading, Input, Text, Button } from "@chakra-ui/react";
 import { FormControl, FormLabel, FormHelperText } from "@chakra-ui/react";
 import styles from "./Signup.module.css";
 import {useNavigate} from "react-router-dom";
+import Header from "../../components/Hedear/Header";
+import Footer from "../../components/Footer/Footer";
 
 const Signup = () => {
   const [form, setForm] = useState({});
@@ -34,6 +36,8 @@ const Signup = () => {
   };
 
   return (
+    <Box>
+      <Header />
     <Box pt="150" mb="50">
       <Box boxShadow="2xl" h="600" w="35%" m="auto" pt="70" p="35">
         <Image
@@ -92,6 +96,8 @@ const Signup = () => {
           </Button>
         </FormControl>
       </Box>
+    </Box>
+    <Footer/>
     </Box>
   );
 };
