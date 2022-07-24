@@ -626,7 +626,7 @@ function Homepage() {
             color={'white'}
             align='center'
             mb={'1rem'}
-            onClick={()=>navigate('/signup')}>
+            onClick={()=>navigate('/signin')}>
             Get Started - it's Free
           </Button>
           <Text align='left'>
