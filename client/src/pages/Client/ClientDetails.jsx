@@ -124,7 +124,7 @@ const ClientDetails = () => {
                   {client.name}
                 </Td>
                 <Td  fontSize="15">
-                  {client.contactPerson}
+                  {client.contactperson}
                 </Td>
                 <Td  fontSize="15">
                   {client.email}
