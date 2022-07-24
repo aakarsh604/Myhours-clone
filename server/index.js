@@ -6,6 +6,7 @@ const  Team = require("./project/route/teamRoute.js")
 const app = express()
 const clientRouter = require("./project/route/clientsRoute")
 const authRouter = require("./Routes/auth.routes");
+require("dotenv").config()
 const PORT = process.env.PORT || 4040
 const  UserModel  = require("./Models/User.auth")
 const {connection} = require("./project/database/teamMember");
@@ -30,7 +31,7 @@ app.use(express.json());
 
 //  app.use("/teamMemberdata",Team)
 
- app.listen(4040, async () => {
+ app.listen(PORT, async () => {
  try {
     await connection;
     console.log("connection to db");

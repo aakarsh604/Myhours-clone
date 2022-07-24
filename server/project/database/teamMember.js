@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const { Schema, model } = require("mongoose");
-const mongodb_url = process.env.MOGODB_URL 
-const connection = mongoose.connect("mongodb+srv://sagar:sagar123@cluster0.dn7hj5y.mongodb.net/myhoursproject?retryWrites=true&w=majority");
+require("dotenv").config()
+const mongodb_url = process.env.MOGODB_URL
+const connection = mongoose.connect(mongodb_url);
 
 const TeamMeamberSchem = new Schema({
   name : String ,

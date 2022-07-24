@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-
+require("dotenv").config()
 const clientSchema = mongoose.Schema({
     name : String,
     contactperson : String,
