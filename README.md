@@ -59,7 +59,7 @@ This collaborative project is a clone of the [MyHours](https://myhours.com) webs
 
 - **Signup**
 
-  ![Signup](./Website%20sneak%20peeks/Signup.png?raw=true)
+  ![Signup](./Website%20sneak%20peeks/SignUp.png?raw=true)
 
 - **Track Page**
 
