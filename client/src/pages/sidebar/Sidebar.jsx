@@ -154,7 +154,7 @@ import axios from "axios";
                 </div>
                 <div className={styled.icon2}>
                     <BsPerson style={{width:"15px" , height:"15px", marginTop:"10px" ,marginLeft:"14px"}} />
-                    <p></p>
+                    <p>{name}</p>
                 </div>
    
             </div>
