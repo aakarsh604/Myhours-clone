@@ -23,6 +23,7 @@ import styles from "./Team.module.css";
 import axios from "axios";
 import {useParams} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
+import Sidebar from "../sidebar/Sidebar";
 
 const EditTeam = () => {
 
@@ -69,6 +70,11 @@ const handlePatch = async () => {
 }
 
   return (
+    <Flex w='100%'>
+    <Box>
+      <Sidebar />
+    </Box>
+    
     <Box w="85%" mb="50">
       <Box w="55%" m="auto">
         <Heading fontWeight="500" mt="30">
@@ -215,6 +221,7 @@ const handlePatch = async () => {
         </FormControl>
       </Box>
     </Box>
+    </Flex>
   );
 };
 

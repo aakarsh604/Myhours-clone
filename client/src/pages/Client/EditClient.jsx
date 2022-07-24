@@ -4,15 +4,18 @@ import {
   Heading,
   Input,
   Textarea,
-  
+  Spacer,
   HStack,
  
-  Button
+  Button,
+  Flex
 } from "@chakra-ui/react";
 import { FormControl, FormLabel } from "@chakra-ui/react"
 import axios from "axios";
 import {useParams} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
+import Sidebar from "../sidebar/Sidebar";
+
 
 const EditClient = () => {
 
@@ -50,11 +53,16 @@ const EditClient = () => {
 
 const handlePatch = async () => {
     await axios.put(`http://localhost:8080/client/${id}`, form);
-    // navigate("/teams");
+     navigate("/clients");
 }
 
   return (
-    <Box w='40%' m='auto' pt='6rem' pb='2rem'>
+    <Flex w='100%'>
+    <Box>
+      <Sidebar />
+    </Box>
+    
+    <Box w='40%' ml={'20rem'}  pt='3rem' pb='2rem'>
     <Heading>New client</Heading>
     <FormControl  onSubmit={handleSubmit} style={{width:'80%'}}>
       <FormLabel fontSize='12px'mt='1rem' color='gray.600' value={form.name}>NAME</FormLabel>
@@ -108,11 +116,13 @@ const handlePatch = async () => {
           align="center"
           mb={'3px'}
           mt={'1rem'}
+          onClick={() =>navigate(-1)}
         >
          Cancel
         </Button>
     </FormControl>
  </Box>
+ </Flex>
   );
 };
 

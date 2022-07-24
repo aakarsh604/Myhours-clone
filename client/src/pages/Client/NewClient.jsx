@@ -1,8 +1,11 @@
-import { Box, FormLabel, HStack, Input, TagLabel, Textarea,Heading, Button, FormControl } from '@chakra-ui/react'
+import { Box, FormLabel, HStack, Input, TagLabel, Textarea,Heading, Button, FormControl,Flex,Spacer } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import Sidebar from "../sidebar/Sidebar";
+import { useNavigate } from 'react-router-dom';
 
 const NewClient = () => {
   const[Client,SetClient]=useState({})
+  const navigate = useNavigate();
   const handleChange=(e)=>{
     SetClient({
       ...Client,
@@ -24,11 +27,17 @@ const NewClient = () => {
     e.preventDefault();
     console.log(Client);
     postData(Client)
+    navigate('/clients')
     
   }
  
   return (
-   <Box w='40%' m='auto' pt='6rem' pb='2rem'>
+    <Flex w='100%'>
+    <Box>
+      <Sidebar />
+    </Box>
+    
+   <Box w='40%' ml={'20rem'}  pt='3rem' pb='2rem'>
       <Heading>New client</Heading>
       <FormControl  onSubmit={handleSubmit} style={{width:'80%'}}>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>NAME</FormLabel>
@@ -82,11 +91,13 @@ const NewClient = () => {
             align="center"
             mb={'3px'}
             mt={'1rem'}
+            onClick={() =>navigate(-1)}
           >
            Cancel
           </Button>
       </FormControl>
    </Box>
+   </Flex>
   )
 }
 

@@ -22,7 +22,7 @@ import { FormControl, FormLabel } from "@chakra-ui/react";
 import styles from "./Team.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import Sidebar from "../sidebar/Sidebar";
 
 const AddTeam = () => {
   const [form, setForm] = useState({});
@@ -55,6 +55,11 @@ const AddTeam = () => {
   };
 
   return (
+    <Flex w='100%'>
+    <Box>
+      <Sidebar />
+    </Box>
+    
     
     <Box w="85%" mb="50">
       <Box w="55%" m="auto">
@@ -242,6 +247,7 @@ const AddTeam = () => {
         </FormControl>
       </Box>
     </Box>
+    </Flex>
    
   );
 };
