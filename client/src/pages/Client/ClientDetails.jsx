@@ -39,7 +39,7 @@ const ClientDetails = () => {
   const [clients, setClients] = useState([]);
   const clientsData = async () => {
     try {
-      let data = await fetch(`http://localhost:8080/client`);
+      let data = await fetch(`http://localhost:4040/client/clientdata`);
       data = await data.json();
       setClients(data);
       console.log(clients);
@@ -49,30 +49,24 @@ const ClientDetails = () => {
   };
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8080/client/${id}`, {
+      .delete(`http://localhost:4040/client/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
       })
-      .then((data) => {
-        axios
-          .get("http://localhost:8080/client")
-          .then((data) => {
-            // console.log("data:", data);
-           setClients(data.data)
-          })
-          .catch((err) => console.error(err));
+      .then(() => {
+        clientsData()
       })
       .catch((err) => console.error(err));
   };
-  const search = async(data)=>{
-    await axios.get(`http://localhost:8080/client/${data}`)
-    .then((res) =>setClients(res.data) )
-    .catch((err) => console.log(err))
-  }
+  // const search = async(data)=>{
+  //   await axios.get(`http://localhost:4040/`)
+  //   .then((res) =>setClients(res.data) )
+  //   .catch((err) => console.log(err))
+  // }
   useEffect(() => {
     clientsData();
-  }, [handleDelete,setClients]);
+  },[]);
   const navigate = useNavigate()
 
   return (
@@ -145,11 +139,11 @@ const ClientDetails = () => {
                           {isOpen ? <SettingsIcon boxSize="5" mb="1" /> : <SettingsIcon boxSize="5" mb="1" />}
                         </MenuButton>
                         <MenuList>
-                            <MenuItem onClick={() => navigate(`/editClient/${client.id}`)}>Edit</MenuItem>
+                            <MenuItem onClick={() => navigate(`/editClient/${client._id}`)}>Edit</MenuItem>
                           <MenuItem >
                             Archive
                           </MenuItem>
-                          <MenuItem onClick={()=>handleDelete(client.id)} >Delete</MenuItem>
+                          <MenuItem onClick={()=>handleDelete(client._id)} >Delete</MenuItem>
                         </MenuList>
                       </>
                     )}

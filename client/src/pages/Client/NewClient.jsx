@@ -4,8 +4,9 @@ import Sidebar from "../sidebar/Sidebar";
 import { useNavigate } from 'react-router-dom';
 
 const NewClient = () => {
+  const  navigate = useNavigate()
   const[Client,SetClient]=useState({})
-  const navigate = useNavigate();
+  
   const handleChange=(e)=>{
     SetClient({
       ...Client,
@@ -13,13 +14,16 @@ const NewClient = () => {
     })
   }
   const postData =async(client)=>{
-    let data = await fetch(`http://localhost:8080/client`,{
+    let data = await fetch(`http://localhost:4040/client/clientpost`,{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body:JSON.stringify(client)
         
     })
     data= await data.json()
+    navigate("/clients")
+
+
    
    
 }
@@ -57,7 +61,7 @@ const NewClient = () => {
         </Box>
        <Box w='46%'>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX PERCENTAGE</FormLabel>
-        <Input type='number' onChange={handleChange} w='100%' variant='outline' name='taxpercentage' ></Input>
+        <Input type='number' onChange={handleChange} w='100%' variant='outline' name='taxparcentage' ></Input>
         </Box>
       </HStack>
         <FormLabel fontSize='12px'mt='1rem' color='gray.600'>TAX NUMBER</FormLabel>
