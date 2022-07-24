@@ -21,15 +21,19 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import { Link as ReachLink } from "react-router-dom"
+import {useNavigate} from 'react-router-dom'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const navigate = useNavigate();
+ 
   return (
-    <Box position={"fixed"} w={"100%"} >
+    <Box zIndex={2} position={"fixed"} w={"100%"}  >
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
+       
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -64,7 +68,7 @@ export default function WithSubnavigation() {
               color={useColorModeValue('gray.800', 'white')}>
               Logo
             </Text> */}
-          <Link to={"#"} ml="2rem" width={"20%"}>
+          <Link as={ReachLink} to={"/"} ml="2rem" width={"20%"}>
             <img src="https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fd37c83dfa3ccb0d2d9836f_myhours-logo.svg" />
           </Link>
 
@@ -92,6 +96,7 @@ export default function WithSubnavigation() {
             color={"white"}
             align="center"
             mb={'3px'}
+            onClick={()=>navigate('/signup')}
           >
             Get My Hours Free
           </Button>
@@ -112,11 +117,11 @@ const DesktopNav = () => {
     <Stack ml={{ md: "17rem" }} direction={"row"} spacing={6}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
-          <Link
+          <Link as={ReachLink}
             _hover={{
               textDecoration: "none",
             }}
-            to={"#"}
+            to={navItem.href}
             fontWeight={"600"}
             color={"blue.400"}
           >
@@ -204,11 +209,11 @@ const NAV_ITEMS = [
   },
   {
     label: "Use Cases",
-    href: "#",
+    href: "/usecase",
   },
   {
     label: "Pricing",
-    href: "#",
+    href: "/pricing",
   },
   {
     label: "Support",
@@ -216,6 +221,6 @@ const NAV_ITEMS = [
   },
   {
     label: "Sign In",
-    href: "#",
+    href: "/signup",
   },
 ];

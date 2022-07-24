@@ -14,6 +14,29 @@ authRouter.post("/signup", async(req,res)=>{
     
 })
 
+authRouter.get("/user", async(req,res)=>{
+    // console.log(req.params.id,"17")
+
+    res.setHeader("content-type","application/json")
+
+    
+    try {
+  
+        const data =  await new UserModel.find({})
+        console.log(data)
+         return res.status(200).json(data)
+       }catch(error){
+         res.status(404).json(error) 
+       
+     }
+
+   
+
+    
+})
+
+
+
 authRouter.post("/signin", async(req,res)=>{
     console.log(req.body);
     const checkuser = await UserModel.find(req.body).lean();
@@ -22,6 +45,7 @@ authRouter.post("/signin", async(req,res)=>{
             ...checkuser[0],
             token : 12345
         }
+        console.log(checkuser)
         res.send(payload);
     }
     else{

@@ -1,10 +1,15 @@
 import React from "react";
 import { Box, Heading, Text, Button, Grid, Image } from "@chakra-ui/react";
 import data from "./data.json";
+import {Link} from "react-router-dom";
 import Reviews from "../../components/Reviews/Reviews";
+import Header from "../../components/Hedear/Header";
+import Footer from "../../components/Footer/Footer";
 
 function Usecase() {
   return (
+    <Box>
+    <Header />
     <Box
       display="flex"
       flexDirection="column"
@@ -13,7 +18,7 @@ function Usecase() {
       border="black"
       justifyContent="center"
     >
-      <Heading letterSpacing="3px" fontWeight="300" size="3xl" mt="100px">
+      <Heading letterSpacing="3px" fontWeight="300" size="3xl" pt="200px">
         Use cases
       </Heading>
       <Heading
@@ -44,7 +49,7 @@ function Usecase() {
         mt="70px"
         fontSize="2xl"
       >
-        Get started - It's Free{" "}
+        <Link to="/signup">Get started - It's Free</Link>
       </Button>
 
       <Grid
@@ -65,6 +70,8 @@ function Usecase() {
       </Grid>
 
       <Reviews/>
+    </Box>
+    <Footer/>
     </Box>
   );
 }
