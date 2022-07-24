@@ -30,7 +30,6 @@ function App() {
         <Route path='/addClient' element={<NewClient />} />
         <Route path='/editClient/:id' element={<EditClient />} />
         <Route path='/track' element={<TrackPage />} />
-     
       </Routes>
     </div>
   );
