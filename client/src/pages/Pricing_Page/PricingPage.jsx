@@ -49,6 +49,9 @@ import {
   Value,
   H5,
 } from './Style';
+import Header from "../../components/Hedear/Header";
+import Footer from "../../components/Footer/Footer";
+
 const panel = {
   width: '93%',
   margin: 'auto',
@@ -56,6 +59,8 @@ const panel = {
 
 export const PricingPage = () => {
   return (
+    <Box>
+      <Header />
       <div
         style={{
           fontFamily: 'Avernirnextitpro, sans-serif',
@@ -304,5 +309,7 @@ export const PricingPage = () => {
           </HStack>
         </Box>
       </div>
+      <Footer/>
+    </Box>
   );
 };
