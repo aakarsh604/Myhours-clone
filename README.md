@@ -53,6 +53,10 @@ This collaborative project is a clone of the [MyHours](https://myhours.com) webs
 
   ![Reviews](./Website%20sneak%20peeks/Reviews.png?raw=true)
 
+-**Support**
+
+  ![Support](./Website%20sneak%20peeks/Support.png?raw=true)
+
 - **Signup**
 
   ![Signup](./Website%20sneak%20peeks/Signup.png?raw=true)
@@ -64,3 +68,7 @@ This collaborative project is a clone of the [MyHours](https://myhours.com) webs
 - **Frequently Asked Question**
 
   ![FAQ](./Website%20sneak%20peeks/FAQ.png?raw=true)
+
+- **Footer**
+
+  ![Footer](./Website%20sneak%20peeks/Footer.png?raw=true)
