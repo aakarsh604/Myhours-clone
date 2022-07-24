@@ -11,12 +11,13 @@ import {
   Flex,
   Text,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../../components/Hedear/Header";
 import Footer from "../../components/Footer/Footer";
 
 const Signup = () => {
   const [form, setForm] = useState({});
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,6 +43,7 @@ const Signup = () => {
         console.log(res._id)
         if(res.token){
             localStorage.setItem("userid", JSON.stringify(res._id))
+            navigate("/track")
             // navigate("/all")
 
             // console.log(res.token)
